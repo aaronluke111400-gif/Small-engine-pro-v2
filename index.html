@@ -8,7 +8,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}body.dark{--bg:#0a1220;--c:#111b2b;--t:#eef3fb;--m:#a0adbf;--l:#2b3749;--b2:#142748}
 header{background:linear-gradient(135deg,var(--n),var(--n2));color:#fff;position:sticky;top:0;z-index:20}.head{max-width:1180px;margin:auto;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;font-size:20px}.brand small{display:block;color:#b9c7da;font-size:11px;margin-top:2px}.head button,.nav button{background:transparent;color:#fff;border:0;font-weight:800}
 main{max-width:1180px;margin:auto;padding:18px 14px 100px}.screen{display:none}.screen.active{display:block}
-.hero{background:linear-gradient(135deg,#0c1930,#1c3b6b);color:#fff;border-radius:22px;padding:25px;box-shadow:var(--sh)}h1,h2,h3{margin:0 0 6px}h2{font-size:30px}.sub{color:var(--m);margin-bottom:14px}.hero p{color:#d3ddec}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card,.tile{background:var(--c);border:1px solid var(--l);border-radius:17px;box-shadow:var(--sh);padding:15px}.tile{text-align:left;min-height:125px;cursor:pointer}.tile .ico{font-size:29px;display:block;margin-bottom:8px}.muted,small{color:var(--m)}.btn{border:1px solid var(--l);background:var(--c);color:var(--t);padding:10px 13px;border-radius:12px;font-weight:800}.btn.primary{background:var(--b);color:#fff;border-color:var(--b)}.btn.soft{background:var(--b2);color:var(--b)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.between{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.input,.select{width:100%;padding:13px;border:1px solid var(--l);border-radius:12px;background:var(--c);color:var(--t)}.pill{display:inline-block;border-radius:99px;background:var(--b2);color:var(--b);padding:5px 9px;font-size:11px;font-weight:900}.catalog{display:flex;flex-direction:column;gap:10px}.item{background:var(--c);border:1px solid var(--l);border-radius:15px;padding:14px;display:flex;justify-content:space-between;gap:12px;align-items:center}.item .actions{display:flex;gap:6px;flex-wrap:wrap}.kpi{background:var(--c);border:1px solid var(--l);border-radius:15px;padding:14px}.kpi b{font-size:27px;display:block;margin-top:4px}.viewer{height:min(68vh,720px);min-height:430px;background:#e9edf3;border:1px solid var(--l);border-radius:16px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;touch-action:none}.canvas{position:absolute;left:50%;top:50%;transform-origin:center}.canvas img{max-width:none;display:block}.thumbs{display:flex;overflow:auto;gap:8px;padding:10px 0}.thumb{border:2px solid var(--l);background:var(--c);border-radius:9px;padding:4px;min-width:80px}.thumb.active{border-color:var(--b)}.thumb img{width:70px;height:50px;object-fit:contain}.bottom{position:fixed;bottom:0;left:0;right:0;background:var(--n);display:grid;grid-template-columns:repeat(6,1fr);z-index:30;padding:7px 3px calc(7px + env(safe-area-inset-bottom))}.nav{border:0;background:transparent;color:#9caabd;font-size:10px;font-weight:800}.nav span{display:block;font-size:20px;height:23px}.nav.active{color:#fff}.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:15px;z-index:100}.modal.show{display:flex}.panel{background:var(--c);color:var(--t);width:min(700px,100%);max-height:92vh;overflow:auto;border-radius:19px;padding:18px}.toast{position:fixed;bottom:92px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:11px 15px;border-radius:12px;display:none;z-index:120}.toast.show{display:block}
+.hero{background:linear-gradient(135deg,#0c1930,#1c3b6b);color:#fff;border-radius:22px;padding:25px;box-shadow:var(--sh)}h1,h2,h3{margin:0 0 6px}h2{font-size:30px}.sub{color:var(--m);margin-bottom:14px}.hero p{color:#d3ddec}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card,.tile{background:var(--c);border:1px solid var(--l);border-radius:17px;box-shadow:var(--sh);padding:15px}.tile{text-align:left;min-height:125px;cursor:pointer}.tile .ico{font-size:29px;display:block;margin-bottom:8px}.muted,small{color:var(--m)}.btn{border:1px solid var(--l);background:var(--c);color:var(--t);padding:10px 13px;border-radius:12px;font-weight:800}.btn.primary{background:var(--b);color:#fff;border-color:var(--b)}.btn.soft{background:var(--b2);color:var(--b)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.between{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.input,.select{width:100%;padding:13px;border:1px solid var(--l);border-radius:12px;background:var(--c);color:var(--t)}.pill{display:inline-block;border-radius:99px;background:var(--b2);color:var(--b);padding:5px 9px;font-size:11px;font-weight:900}.catalog{display:flex;flex-direction:column;gap:10px}.item{background:var(--c);border:1px solid var(--l);border-radius:15px;padding:14px;display:flex;justify-content:space-between;gap:12px;align-items:center}.item .actions{display:flex;gap:6px;flex-wrap:wrap}.kpi{background:var(--c);border:1px solid var(--l);border-radius:15px;padding:14px}.kpi b{font-size:27px;display:block;margin-top:4px}.viewer{height:min(68vh,720px);min-height:430px;background:#e9edf3;border:1px solid var(--l);border-radius:16px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;touch-action:none}.canvas{position:absolute;left:50%;top:50%;transform-origin:center}.canvas img{max-width:none;display:block}.thumbs{display:flex;overflow:auto;gap:8px;padding:10px 0}.thumb{border:2px solid var(--l);background:var(--c);border-radius:9px;padding:4px;min-width:80px}.thumb.active{border-color:var(--b)}.thumb img{width:70px;height:50px;object-fit:contain}.bottom{position:fixed;bottom:0;left:0;right:0;background:var(--n);display:grid;grid-template-columns:repeat(10,1fr);z-index:30;padding:7px 3px calc(7px + env(safe-area-inset-bottom))}.nav{border:0;background:transparent;color:#9caabd;font-size:10px;font-weight:800}.nav span{display:block;font-size:20px;height:23px}.nav.active{color:#fff}.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:15px;z-index:100}.modal.show{display:flex}.panel{background:var(--c);color:var(--t);width:min(700px,100%);max-height:92vh;overflow:auto;border-radius:19px;padding:18px}.toast{position:fixed;bottom:92px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:11px 15px;border-radius:12px;display:none;z-index:120}.toast.show{display:block}
 @media(min-width:800px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.item{align-items:flex-start;flex-direction:column}}
 </style>
 </head><body>
@@ -16,7 +16,20 @@ main{max-width:1180px;margin:auto;padding:18px 14px 100px}.screen{display:none}.
 <main>
 <section id="home" class="screen active">
 <div class="hero"><span class="pill">COMPLETE WORKSHOP EDITION</span><h1 style="font-size:40px;margin-top:10px">One app for the whole shop.</h1><p>Engines, mowers, generators, pressure washers, outdoor power equipment, manuals, parts lookups, diagrams and service history.</p><div class="row"><button class="btn primary" onclick="go('catalog')">Browse equipment</button><button class="btn" onclick="go('dashboard')">Dashboard</button></div></div>
-<div style="margin-top:18px" class="grid">
+<div class="card" style="margin-top:12px">
+<div class="between"><div><b>🧾 Customer Invoices</b><div class="muted">Log the repair, labor, parts and customer information, then generate an invoice.</div></div><button class="btn primary" onclick="go('invoice')">Open invoices</button></div>
+</div>
+
+<div class="between"><div><b>🛒 Parts Finder</b><div class="muted">Identify the machine first, then verify the exact part number before buying.</div></div><button class="btn primary" onclick="openPartsFinder()">Find parts</button></div>
+</div>
+<div class="card" style="margin-top:18px">
+<div class="between"><div><b>Universal search</b><div class="muted">Find a machine, engine family, or equipment type.</div></div><button class="btn primary" onclick="openSearch()">Search</button></div>
+</div>
+<div style="margin-top:12px" class="grid4">
+<button class="tile" onclick="openTroubleshoot()"><span class="ico">🩺</span><b>Troubleshooter</b><small>Common symptoms and diagnostic starting points.</small></button>
+<button class="tile" onclick="openMaintenanceGuide()"><span class="ico">📅</span><b>Service Guide</b><small>Maintenance planning reference.</small></button>
+</div>
+<div style="margin-top:12px" class="grid">
 <button class="tile" onclick="go('catalog')"><span class="ico">🧰</span><b>Equipment Library</b><small>Engines, lawn equipment, pressure washers, generators and more.</small></button>
 <button class="tile" onclick="go('parts')"><span class="ico">⚙️</span><b>Diagrams</b><small>Open your local manufacturer diagram pages with zoom and pan.</small></button>
 <button class="tile" onclick="go('lookup')"><span class="ico">🔎</span><b>Manual & Parts Lookup</b><small>Jump directly to official manufacturer lookup systems.</small></button>
@@ -43,9 +56,33 @@ main{max-width:1180px;margin:auto;padding:18px 14px 100px}.screen{display:none}.
 
 <section id="maintenance" class="screen"><div class="between"><div><h2>Maintenance</h2><div class="sub">Simple checklist + service records.</div></div><button class="btn primary" onclick="openService()">＋ Log service</button></div><div class="card"><b id="maintName">Current machine</b><div id="checks" style="margin-top:8px"></div></div><div class="card"><b>Service history</b><div id="history"></div></div></section>
 
-<section id="more" class="screen"><h2>Settings & Data</h2><div class="card"><b>Backup</b><p class="muted">Export everything you entered into the app.</p><div class="row"><button class="btn primary" onclick="backup()">⬇️ Export</button><label class="btn">⬆️ Import<input type="file" accept=".json" style="display:none" onchange="restore(this)"></label></div></div><div class="card"><b>Reset</b><p class="muted">Clear all local app data.</p><button class="btn" onclick="resetAll()">Clear data</button></div></section>
+
+
+
+<section id="invoice" class="screen">
+<div class="between"><div><h2>Invoices</h2><div class="sub">Turn a repair into a professional customer invoice.</div></div><button class="btn primary" onclick="newInvoice()">＋ New Invoice</button></div>
+<div class="grid4" id="invoiceStats"></div>
+<div id="invoiceList" class="catalog" style="margin-top:12px"></div>
+</section>
+<section id="partsFinder" class="screen">
+<div class="between"><div><h2>Parts Finder</h2><div class="sub">Model → serial/type → component → verified part → buy.</div></div><button class="btn" onclick="go('partslist')">My Parts List</button></div>
+<div class="card">
+<div class="grid">
+<select id="pfMake" class="select"></select>
+<input id="pfModel" class="input" placeholder="Exact model number">
+<input id="pfSerial" class="input" placeholder="Serial / type / code (if applicable)">
+<input id="pfPart" class="input" placeholder="Part number or keyword (optional)">
+</div>
+<div class="row" style="margin-top:10px"><button class="btn primary" onclick="runPartsFinder()">Find exact parts</button><button class="btn" onclick="verifyParts()">Open manufacturer verification</button></div>
+<div class="card" style="margin-top:12px;background:var(--b2);box-shadow:none"><b>Important</b><p class="muted">The app will not guess fitment. Exact parts can depend on model, type and serial range. Verify the result in the manufacturer's catalog before ordering.</p></div>
+</div>
+<div id="pfResults" class="catalog"></div>
+</section>
+<section id="jobs" class="screen"><div class="between"><div><h2>Repair Jobs</h2><div class="sub">Track active repairs from diagnosis to finished.</div></div><button class="btn primary" onclick="newJob()">＋ New Job</button></div><div id="jobList" class="catalog"></div></section>
+<section id="partslist" class="screen"><div class="between"><div><h2>Parts List</h2><div class="sub">Keep parts needed for your current repairs.</div></div><div class="row"><button class="btn primary" onclick="newPart()">＋ Add Part</button><button class="btn" onclick="openBuyList()">🛒 Buy List</button></div></div><div id="partsList" class="catalog"></div></section>
+<section id="more" class="screen"><h2>Settings & Data</h2><div class="grid4" style="margin:12px 0"><button class="tile" onclick="go('jobs')"><span class="ico">📋</span><b>Repair Jobs</b></button><button class="tile" onclick="go('partslist')"><span class="ico">🛒</span><b>Parts List</b></button><button class="tile" onclick="openTroubleshoot()"><span class="ico">🩺</span><b>Troubleshooter</b></button><button class="tile" onclick="openMaintenanceGuide()"><span class="ico">📅</span><b>Service Guide</b></button></div><div class="card"><b>Backup</b><p class="muted">Export everything you entered into the app.</p><div class="row"><button class="btn primary" onclick="backup()">⬇️ Export</button><label class="btn">⬆️ Import<input type="file" accept=".json" style="display:none" onchange="restore(this)"></label></div></div><div class="card"><b>Reset</b><p class="muted">Clear all local app data.</p><button class="btn" onclick="resetAll()">Clear data</button></div></section>
 </main>
-<nav class="bottom"><button class="nav active" data-go="home"><span>⌂</span>Home</button><button class="nav" data-go="dashboard"><span>▦</span>Dash</button><button class="nav" data-go="catalog"><span>🧰</span>Library</button><button class="nav" data-go="parts"><span>⚙️</span>Parts</button><button class="nav" data-go="equipment"><span>🛠️</span>My Gear</button><button class="nav" data-go="more"><span>•••</span>More</button></nav>
+<nav class="bottom"><button class="nav active" data-go="home"><span>⌂</span>Home</button><button class="nav" data-go="dashboard"><span>▦</span>Dash</button><button class="nav" data-go="catalog"><span>🧰</span>Library</button><button class="nav" data-go="parts"><span>⚙️</span>Parts</button><button class="nav" data-go="equipment"><span>🛠️</span>My Gear</button><button class="nav" data-go="jobs"><span>📋</span>Jobs</button><button class="nav" data-go="invoice"><span>🧾</span>Invoices</button><button class="nav" data-go="partsFinder"><span>🔎</span>Find</button><button class="nav" data-go="partslist"><span>🛒</span>Parts</button><button class="nav" data-go="more"><span>•••</span>More</button></nav>
 <div id="modal" class="modal"><div class="panel" id="panel"></div></div><div id="toast" class="toast"></div>
 <script>
 const CAT={"Engines":[["Kohler","CV620\u2013CV730","V-Twin","Kohler manuals / parts","https://www.kohler.com/en/support"],["Briggs & Stratton","Classic / Quantum / Intek / Professional","Small engine","Briggs manuals & parts","https://www.briggsandstratton.com/en-us/support/manuals"],["Honda","GX120 / GX160 / GX200 / GX240 / GX270 / GX340 / GX390","GX commercial","Honda manuals & service","https://engines.honda.com/support-and-service"],["Honda","GCV135 / GCV160 / GCV170 / GCV190 / GCV200","Residential","Honda manuals","https://engines.honda.com/support-and-service/owners-manuals"],["Honda","GX610 / GX620 / GX630 / GX640 / GX660 / GX670 / GX690","V-Twin","Honda manuals & service","https://engines.honda.com/support-and-service"],["Briggs & Stratton","Vanguard","Commercial","Briggs manuals & parts","https://www.briggsandstratton.com/en-us/support/manuals"],["Generac","Portable / standby engines","Generator engines","Generac support","https://www.generac.com/service-support"]],"Lawn Equipment":[["Toro","Walk-behind mowers","Mower","Toro parts & manuals","https://www.toro.com/en/parts"],["Toro","TimeCutter / Z Master","Zero-turn","Toro parts & manuals","https://www.toro.com/en/parts"],["Cub Cadet","Push / riding / zero-turn","Mower","Cub Cadet manuals","https://www.cubcadet.com/en_US/operatorsmanuals"],["Troy-Bilt","Push / riding / zero-turn","Mower","Troy-Bilt support","https://www.troybilt.com/en_US/support"],["John Deere","Lawn tractors / zero-turn","Mower","John Deere manuals & parts","https://www.deere.com/en/parts-and-service/"],["Husqvarna","Walk-behind / riding / zero-turn","Mower","Husqvarna support","https://www.husqvarna.com/us/support/"],["Exmark","Walk-behind / zero-turn","Commercial mower","Exmark manuals & parts","https://www.exmark.com/support"],["Bad Boy","Mowers / zero-turn","Commercial mower","Bad Boy support","https://www.badboymowers.com/"]],"Pressure Washers":[["Briggs & Stratton","Gas pressure washers","Pressure washer","Briggs support","https://www.briggsandstratton.com/en-us/support"],["Simpson","Residential / commercial","Pressure washer","Simpson support","https://simpsoncleaning.com/support/"],["Generac","Pressure washers","Pressure washer","Generac support","https://www.generac.com/service-support"],["Kohler","Engine-powered equipment","Engine","Kohler support","https://www.kohler.com/en/support"]],"Generators":[["Generac","Portable generators","Generator","Generac support","https://www.generac.com/service-support"],["Generac","Home standby generators","Standby","Generac support","https://www.generac.com/service-support"],["Briggs & Stratton","Portable generators","Generator","Briggs support","https://www.briggsandstratton.com/en-us/support"],["Honda","EU / EB / EG series","Generator","Honda engine support","https://engines.honda.com/support-and-service"]],"Other Outdoor Power":[["Briggs & Stratton","Snow blower engines","Snow equipment","Briggs support","https://www.briggsandstratton.com/en-us/support"],["Cub Cadet","Snow blowers","Snow equipment","Cub Cadet manuals","https://www.cubcadet.com/en_US/operatorsmanuals"],["Troy-Bilt","Tillers / trimmers / blowers","Outdoor power","Troy-Bilt support","https://www.troybilt.com/en_US/support"],["Husqvarna","Chainsaws / trimmers / blowers","Outdoor power","Husqvarna support","https://www.husqvarna.com/us/support/"]]};
@@ -63,7 +100,7 @@ const LOOKUPS=[
 ["Exmark","Support / manuals","https://www.exmark.com/support"]
 ];
 const PAGES=[58,60,62,63,65,66,68,75,79,80,85], INFO={58:"Breather / oil pan / piston",60:"Cylinder head / valve train",62:"Cylinder head components",63:"Crankcase / main components",65:"Breather / oil pan / piston",66:"Engine exploded assembly",68:"Flywheel / governor",75:"Engine exploded assembly",79:"Breather / oil pan / piston",80:"Crankcase / main components",85:"Carburetor / fuel system"};
-let S=JSON.parse(localStorage.getItem("sep_v3")||"null")||{dark:false,equipment:[],active:null,services:[],saved:[],checks:{}};
+let S=JSON.parse(localStorage.getItem("sep_v3")||"null")||{dark:false,equipment:[],active:null,services:[],saved:[],checks:{},jobs:[],parts:[],invoices:[]};
 const $=x=>document.getElementById(x), esc=x=>String(x??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 function save(){localStorage.setItem("sep_v3",JSON.stringify(S))}
 function toast(x){$("toast").textContent=x;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1800)}
@@ -109,6 +146,199 @@ function openManual(){location.href="Kohler_CV620_CV730_Service_Manual.pdf"}
 function backup(){let b=new Blob([JSON.stringify(S,null,2)],{type:"application/json"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="small-engine-pro-backup.json";a.click();URL.revokeObjectURL(u)}
 function restore(i){let f=i.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{S=JSON.parse(r.result);save();render();toast("Backup restored")}catch(e){toast("Invalid backup")}};r.readAsText(f)}
 function resetAll(){if(confirm("Clear all app data?")){localStorage.removeItem("sep_v3");location.reload()}}
-function render(){ensure();renderCatalog();renderLookup();renderEquipment();renderMaintenance();renderDashboard()}
+
+
+const OEM=[
+["Briggs & Stratton","Parts Lookup","https://shop.briggsandstratton.com/pages/parts-lookup","Model number, type/code and exact IPL should be checked."],
+["Honda Engines","Parts, Repair & Support","https://engines.honda.com/support-and-service","Honda recommends model and serial information for parts/service."],
+["Toro","Parts Lookup","https://www.toro.com/en/parts","Model and serial ranges can determine the exact parts diagram."],
+["Kohler","Support","https://www.kohler.com/en/support","Use exact engine model/specification before ordering."],
+["Cub Cadet","Manuals / Support","https://www.cubcadet.com/en_US/operatorsmanuals","Use exact model and serial information."],
+["Troy-Bilt","Support","https://www.troybilt.com/en_US/support","Use exact model information."],
+["John Deere","Parts & Service","https://www.deere.com/en/parts-and-service/","Use exact model/serial information."],
+["Husqvarna","Support","https://www.husqvarna.com/us/support/","Use exact product identification."],
+["Generac","Service & Support","https://www.generac.com/service-support","Use exact model/serial information."]
+];
+function openPartsFinder(){
+ $("modal").classList.add("show");
+ $("panel").innerHTML=`<h2>🛒 Find the correct part</h2><p class="muted">Choose the manufacturer and enter the exact identification from the machine's data plate.</p>
+ <select id="pfm" class="select">${OEM.map((x,i)=>`<option value="${i}">${esc(x[0])}</option>`).join("")}</select>
+ <input id="pfmodel" class="input" style="margin-top:8px" placeholder="Model number">
+ <input id="pfserial" class="input" style="margin-top:8px" placeholder="Serial / type / code">
+ <input id="pfkeyword" class="input" style="margin-top:8px" placeholder="Part or component (optional)">
+ <div class="row" style="margin-top:12px"><button class="btn primary" onclick="findPartsModal()">Find / Verify</button><button class="btn" onclick="closeM()">Close</button></div>
+ <div id="pfout" class="catalog" style="margin-top:12px"></div>`;
+}
+function findPartsModal(){
+ let o=OEM[+$("pfm").value],m=$("pfmodel").value.trim(),s=$("pfserial").value.trim(),k=$("pfkeyword").value.trim();
+ $("pfout").innerHTML=`<div class="item"><div><span class="pill">${esc(o[0])}</span><h3>${esc(k||"Parts lookup")}</h3><small>Model: ${esc(m||"not entered")} • Serial/type: ${esc(s||"not entered")}</small></div><button class="btn primary" onclick="openManufacturer(${+$("pfm").value})">Open catalog</button></div><div class="card"><b>Before buying</b><p class="muted">${esc(o[3])} The app stores your candidate part, but manufacturer verification is required for exact fitment.</p></div>`;
+}
+function openManufacturer(i){window.open(OEM[i][2],"_blank")}
+function verifyParts(){
+ let make=$("pfMake")?.value||current().make||"";
+ let o=OEM.find(x=>x[0].toLowerCase()===make.toLowerCase())||OEM[0];
+ window.open(o[2],"_blank");
+}
+function runPartsFinder(){
+ let make=$("pfMake").value,model=$("pfModel").value.trim(),serial=$("pfSerial").value.trim(),part=$("pfPart").value.trim();
+ let o=OEM.find(x=>x[0]===make)||OEM[0];
+ $("pfResults").innerHTML=`<div class="item"><div><span class="pill">${esc(make)}</span><h3>${esc(part||"Parts / diagram lookup")}</h3><small>Model: ${esc(model||"not entered")} • Serial/type: ${esc(serial||"not entered")}</small></div><button class="btn primary" onclick="window.open('${o[2]}','_blank')">Open official catalog</button></div>
+ <div class="card"><b>Why this is safer</b><p class="muted">A part number is only useful if it matches the exact machine. Some manufacturers use serial-number ranges for a single model, so the app will never claim an unverified part is guaranteed to fit.</p></div>`;
+}
+function openBuyList(){
+ let ps=(S.parts||[]).filter(p=>!p.got);
+ $("modal").classList.add("show");
+ $("panel").innerHTML=`<h2>🛒 Parts to Buy</h2>${ps.length?`<div class="catalog">${ps.map(p=>`<div class="item"><div><b>${esc(p.pn||"Part")}</b><small>${esc(p.desc)} • Qty ${esc(p.qty)}</small></div><button class="btn" onclick="copyPart('${esc(p.pn||p.desc)}')">Copy</button></div>`).join("")}</div>`:"<div class='card'>Nothing is marked as needed.</div>"}<button class="btn" style="margin-top:12px" onclick="closeM()">Close</button>`;
+}
+async function copyPart(t){try{await navigator.clipboard.writeText(t);toast("Copied part number")}catch(e){toast(t)}}
+
+
+function money(n){return "$"+Number(n||0).toFixed(2)}
+function invoiceTotal(inv){
+ let parts=(inv.parts||[]).reduce((a,p)=>a+(Number(p.qty)||0)*(Number(p.price)||0),0);
+ let labor=(Number(inv.hours)||0)*(Number(inv.rate)||0);
+ let sub=parts+labor;
+ let tax=sub*(Number(inv.tax)||0)/100;
+ return {parts,labor,sub,tax,total:sub+tax};
+}
+function newInvoice(existing){
+ let inv=existing||{id:Date.now(),number:"INV-"+String(Date.now()).slice(-6),date:new Date().toISOString(),customer:"",phone:"",email:"",equipment:current().make+" "+current().model,serial:current().serial||"",problem:"",diagnosis:"",work:"",hours:0,rate:0,tax:0,parts:[],status:"Draft",notes:""};
+ $("modal").classList.add("show");
+ $("panel").innerHTML=`<h2>${existing?"Edit":"New"} invoice</h2>
+ <div class="grid">
+ <input id="icust" class="input" placeholder="Customer name" value="${esc(inv.customer)}">
+ <input id="iphone" class="input" placeholder="Phone" value="${esc(inv.phone)}">
+ <input id="iemail" class="input" placeholder="Email" value="${esc(inv.email)}">
+ <input id="inum" class="input" placeholder="Invoice number" value="${esc(inv.number)}">
+ <input id="ieq" class="input" placeholder="Equipment" value="${esc(inv.equipment)}">
+ <input id="iserial" class="input" placeholder="Serial / model" value="${esc(inv.serial)}">
+ </div>
+ <textarea id="iprob" class="input" style="margin-top:8px;min-height:70px" placeholder="Customer complaint / what was wrong">${esc(inv.problem)}</textarea>
+ <textarea id="idiag" class="input" style="margin-top:8px;min-height:70px" placeholder="Diagnosis">${esc(inv.diagnosis)}</textarea>
+ <textarea id="iwork" class="input" style="margin-top:8px;min-height:90px" placeholder="Work performed">${esc(inv.work)}</textarea>
+ <div class="grid" style="margin-top:8px"><input id="ihours" type="number" step=".1" min="0" class="input" placeholder="Labor hours" value="${esc(inv.hours)}"><input id="irate" type="number" step=".01" min="0" class="input" placeholder="Labor rate / hour" value="${esc(inv.rate)}"><input id="itax" type="number" step=".01" min="0" class="input" placeholder="Tax %" value="${esc(inv.tax)}"></div>
+ <div class="card" style="margin-top:10px"><div class="between"><b>Parts used</b><button class="btn" onclick="invoiceAddFromList()">Import saved parts</button><button class="btn" onclick="invoiceAddPart()">＋ Part</button></div><div id="invoiceParts"></div></div>
+ <textarea id="inotes" class="input" style="margin-top:8px;min-height:60px" placeholder="Warranty / payment / customer notes">${esc(inv.notes)}</textarea>
+ <div id="invoicePreviewMini" class="card" style="margin-top:10px"></div>
+ <div class="row" style="margin-top:12px"><button class="btn primary" onclick="saveInvoiceForm(${inv.id})">Save invoice</button><button class="btn" onclick="closeM()">Cancel</button></div>`;
+ window._invoiceDraft=inv;
+ renderInvoiceParts();
+ ["ihours","irate","itax"].forEach(id=>$(id).oninput=renderInvoiceMini);
+ renderInvoiceMini();
+}
+
+function invoiceAddFromList(){let d=window._invoiceDraft;let needed=(S.parts||[]).filter(p=>!p.got);needed.forEach(p=>d.parts.push({part:p.pn||"",desc:p.desc||"",qty:Number(p.qty)||1,price:Number(p.price)||0}));renderInvoiceParts();renderInvoiceMini();toast(needed.length+" parts imported")}
+
+function invoiceAddPart(){
+ let d=window._invoiceDraft;d.parts=d.parts||[];d.parts.push({part:"",desc:"",qty:1,price:0});renderInvoiceParts();renderInvoiceMini();
+}
+function renderInvoiceParts(){
+ let d=window._invoiceDraft;let el=$("invoiceParts");if(!el)return;
+ el.innerHTML=(d.parts||[]).map((p,i)=>`<div class="item" style="margin-top:7px">
+ <input class="input" style="max-width:180px" placeholder="Part #" value="${esc(p.part)}" oninput="_invoiceDraft.parts[${i}].part=this.value">
+ <input class="input" placeholder="Description" value="${esc(p.desc)}" oninput="_invoiceDraft.parts[${i}].desc=this.value">
+ <input class="input" style="max-width:80px" type="number" min="1" value="${esc(p.qty)}" oninput="_invoiceDraft.parts[${i}].qty=this.value;renderInvoiceMini()">
+ <input class="input" style="max-width:120px" type="number" min="0" step=".01" value="${esc(p.price)}" placeholder="Unit price" oninput="_invoiceDraft.parts[${i}].price=this.value;renderInvoiceMini()">
+ <button class="btn" onclick="_invoiceDraft.parts.splice(${i},1);renderInvoiceParts();renderInvoiceMini()">Remove</button>
+ </div>`).join("")||"<p class='muted'>No parts added.</p>";
+}
+function renderInvoiceMini(){
+ let d=window._invoiceDraft;if(!d||!$("invoicePreviewMini"))return;
+ d.hours=Number($("ihours")?.value||d.hours||0);d.rate=Number($("irate")?.value||d.rate||0);d.tax=Number($("itax")?.value||d.tax||0);
+ let t=invoiceTotal(d);
+ $("invoicePreviewMini").innerHTML=`<div class="between"><span>Parts</span><b>${money(t.parts)}</b></div><div class="between"><span>Labor</span><b>${money(t.labor)}</b></div><div class="between"><span>Subtotal</span><b>${money(t.sub)}</b></div><div class="between"><span>Tax</span><b>${money(t.tax)}</b></div><hr><div class="between"><b>Total</b><b style="font-size:22px">${money(t.total)}</b></div>`;
+}
+function saveInvoiceForm(id){
+ let d=window._invoiceDraft;Object.assign(d,{customer:$("icust").value,phone:$("iphone").value,email:$("iemail").value,number:$("inum").value,equipment:$("ieq").value,serial:$("iserial").value,problem:$("iprob").value,diagnosis:$("idiag").value,work:$("iwork").value,hours:Number($("ihours").value||0),rate:Number($("irate").value||0),tax:Number($("itax").value||0),notes:$("inotes").value,status:d.status||"Draft"});
+ S.invoices=S.invoices||[];let ix=S.invoices.findIndex(x=>x.id===id);if(ix>=0)S.invoices[ix]=d;else S.invoices.unshift(d);save();closeM();renderInvoices();toast("Invoice saved");
+}
+function renderInvoices(){
+ S.invoices=S.invoices||[];let paid=S.invoices.filter(x=>x.status==="Paid").length,total=S.invoices.reduce((a,x)=>a+invoiceTotal(x).total,0);
+ $("invoiceStats").innerHTML=`<div class="kpi">Invoices<b>${S.invoices.length}</b></div><div class="kpi">Paid<b>${paid}</b></div><div class="kpi">Total billed<b>${money(total)}</b></div><div class="kpi">Drafts<b>${S.invoices.filter(x=>x.status==="Draft").length}</b></div>`;
+ $("invoiceList").innerHTML=S.invoices.map(i=>{let t=invoiceTotal(i);return `<div class="item"><div><span class="pill">${esc(i.status)}</span><h3>${esc(i.number)} — ${esc(i.customer||"Customer")}</h3><small>${esc(i.equipment)} • ${new Date(i.date).toLocaleDateString()} • ${money(t.total)}</small></div><div class="actions"><button class="btn primary" onclick="newInvoice(S.invoices.find(x=>x.id===${i.id}))">Edit</button><button class="btn" onclick="viewInvoice(${i.id})">View</button><button class="btn" onclick="printInvoice(${i.id})">Print / PDF</button><button class="btn" onclick="markInvoice(${i.id})">${i.status==="Paid"?"Mark unpaid":"Mark paid"}</button></div></div>`}).join("")||"<div class='card'>No invoices yet.</div>";
+}
+function markInvoice(id){let i=S.invoices.find(x=>x.id===id);i.status=i.status==="Paid"?"Open":"Paid";save();renderInvoices()}
+function viewInvoice(id){let i=S.invoices.find(x=>x.id===id);let t=invoiceTotal(i);$("modal").classList.add("show");$("panel").innerHTML=invoiceHTML(i,t)+`<div class="row" style="margin-top:12px"><button class="btn primary" onclick="printInvoice(${id})">Print / Save PDF</button><button class="btn" onclick="closeM()">Close</button></div>`}
+function invoiceHTML(i,t){
+ let parts=(i.parts||[]).map(p=>`<tr><td>${esc(p.part)}</td><td>${esc(p.desc)}</td><td>${esc(p.qty)}</td><td>${money(p.price)}</td><td>${money((Number(p.qty)||0)*(Number(p.price)||0))}</td></tr>`).join("");
+ return `<div id="printableInvoice" style="background:#fff;color:#111;padding:25px;border-radius:12px"><div style="display:flex;justify-content:space-between;gap:20px"><div><h1 style="margin:0">INVOICE</h1><b>Small Engine Pro</b><div>${esc(i.number)}</div><div>${new Date(i.date).toLocaleDateString()}</div></div><div style="text-align:right"><b>BILL TO</b><div>${esc(i.customer||"Customer")}</div><div>${esc(i.phone)}</div><div>${esc(i.email)}</div></div></div><hr><h3>Equipment</h3><div>${esc(i.equipment)} ${i.serial?"• "+esc(i.serial):""}</div><h3>Customer complaint</h3><p>${esc(i.problem||"—")}</p><h3>Diagnosis</h3><p>${esc(i.diagnosis||"—")}</p><h3>Work performed</h3><p>${esc(i.work||"—")}</p><table style="width:100%;border-collapse:collapse;margin-top:15px"><tr><th style="text-align:left;border-bottom:1px solid #ccc">Part #</th><th style="text-align:left;border-bottom:1px solid #ccc">Description</th><th style="border-bottom:1px solid #ccc">Qty</th><th style="border-bottom:1px solid #ccc">Price</th><th style="border-bottom:1px solid #ccc">Amount</th></tr>${parts}</table><div style="margin-left:auto;max-width:300px;margin-top:15px"><div style="display:flex;justify-content:space-between"><span>Parts</span><b>${money(t.parts)}</b></div><div style="display:flex;justify-content:space-between"><span>Labor (${esc(i.hours)} hr × ${money(i.rate)})</span><b>${money(t.labor)}</b></div><div style="display:flex;justify-content:space-between"><span>Subtotal</span><b>${money(t.sub)}</b></div><div style="display:flex;justify-content:space-between"><span>Tax (${esc(i.tax)}%)</span><b>${money(t.tax)}</b></div><hr><div style="display:flex;justify-content:space-between;font-size:22px"><b>TOTAL</b><b>${money(t.total)}</b></div></div><p style="margin-top:25px">${esc(i.notes||"Thank you for your business.")}</p></div>`;
+}
+function printInvoice(id){
+ let i=S.invoices.find(x=>x.id===id),t=invoiceTotal(i),w=window.open("","_blank");if(!w)return toast("Allow pop-ups to print");
+ w.document.write(`<html><head><title>${esc(i.number)}</title><style>body{font-family:Arial;margin:30px;color:#111}table{width:100%;border-collapse:collapse}th,td{padding:7px;border-bottom:1px solid #ddd}button{padding:10px}</style></head><body>${invoiceHTML(i,t)}<button onclick="window.print()">Print / Save PDF</button></body></html>`);w.document.close();
+}
+
+function newJob(){
+ $("modal").classList.add("show");$("panel").innerHTML=`<h2>New repair job</h2><input id="jn" class="input" placeholder="Job title"><input id="jsym" class="input" style="margin-top:8px" placeholder="Symptom / complaint"><textarea id="jnotes" class="input" style="margin-top:8px;min-height:100px" placeholder="Diagnosis / notes"></textarea><div class="row" style="margin-top:12px"><button class="btn primary" onclick="saveJob()">Create</button><button class="btn" onclick="closeM()">Cancel</button></div>`;
+}
+function saveJob(){let title=$("jn").value.trim();if(!title)return toast("Enter a job title");S.jobs=S.jobs||[];S.jobs.unshift({id:Date.now(),eid:current().id,title,symptom:$("jsym").value,notes:$("jnotes").value,status:"Open",date:new Date().toISOString()});save();closeM();renderJobs();toast("Job created")}
+function renderJobs(){S.jobs=S.jobs||[];$("jobList").innerHTML=S.jobs.map(j=>`<div class="item"><div><span class="pill">${esc(j.status)}</span><h3>${esc(j.title)}</h3><small>${esc(j.symptom||"No symptom entered")} • ${new Date(j.date).toLocaleDateString()}</small></div><div class="actions"><button class="btn" onclick="cycleJob(${j.id})">${j.status==="Open"?"Diagnosing":j.status==="Diagnosing"?"Repairing":"Complete"}</button><button class="btn" onclick="deleteJob(${j.id})">Delete</button></div></div>`).join("")||"<div class='card'>No repair jobs yet.</div>"}
+function cycleJob(id){let j=S.jobs.find(x=>x.id===id);j.status=j.status==="Open"?"Diagnosing":j.status==="Diagnosing"?"Repairing":j.status==="Repairing"?"Complete":"Open";save();renderJobs()}
+function deleteJob(id){S.jobs=S.jobs.filter(x=>x.id!==id);save();renderJobs()}
+function newPart(){
+ $("modal").classList.add("show");$("panel").innerHTML=`<h2>Add part</h2><input id="pn" class="input" placeholder="Part number"><input id="pd" class="input" style="margin-top:8px" placeholder="Description"><input id="pq" type="number" min="1" value="1" class="input" style="margin-top:8px" placeholder="Quantity"><input id="ps" class="input" style="margin-top:8px" placeholder="Source / store / notes"><div class="row" style="margin-top:12px"><button class="btn primary" onclick="savePart()">Add</button><button class="btn" onclick="closeM()">Cancel</button></div>`;
+}
+function savePart(){let p=$("pn").value.trim(),d=$("pd").value.trim();if(!p&&!d)return toast("Enter a part number or description");S.parts=S.parts||[];S.parts.unshift({id:Date.now(),pn:p,desc:d,qty:$("pq").value,source:$("ps").value,got:false});save();closeM();renderPartsList();toast("Part added")}
+function renderPartsList(){S.parts=S.parts||[];$("partsList").innerHTML=S.parts.map(p=>`<div class="item"><div><span class="pill">${p.got?"RECEIVED":"NEEDED"}</span><h3>${esc(p.pn||"Part")}</h3><small>${esc(p.desc)} • Qty ${esc(p.qty)}${p.source?" • "+esc(p.source):""}</small></div><div class="actions"><button class="btn" onclick="togglePart(${p.id})">${p.got?"Mark needed":"Mark received"}</button><button class="btn" onclick="copyPart('${esc(p.pn||p.desc)}')">Copy</button><button class="btn" onclick="deletePart(${p.id})">Delete</button></div></div>`).join("")||"<div class='card'>No parts added.</div>"}
+function togglePart(id){let p=S.parts.find(x=>x.id===id);p.got=!p.got;save();renderPartsList()}
+function deletePart(id){S.parts=S.parts.filter(x=>x.id!==id);save();renderPartsList()}
+
+function initPartsFinder(){
+ let sel=$("pfMake"); if(!sel)return;
+ sel.innerHTML=OEM.map(x=>`<option>${esc(x[0])}</option>`).join("");
+ let e=current(), match=OEM.find(x=>x[0].toLowerCase()===String(e.make||"").toLowerCase());
+ if(match)sel.value=match[0];
+ if($("pfModel"))$("pfModel").value=e.model||"";
+}
+function render(){ensure();S.invoices=S.invoices||[];S.jobs=S.jobs||[];S.parts=S.parts||[];renderCatalog();renderLookup();renderEquipment();renderMaintenance();renderDashboard();if($("invoiceList"))renderInvoices();initPartsFinder();if($("jobList"))renderJobs();if($("partsList"))renderPartsList()}
 document.body.classList.toggle("dark",S.dark);render();setPage(0);
+
+/* ===== ALL-IN-ONE WORKSHOP V4 ===== */
+const TROUBLE=[
+["Won't start","Check fuel level and freshness, fuel shutoff, spark, air filter, carburetor/fuel delivery, and engine stop controls."],
+["Starts then dies","Check fuel flow, tank vent, carburetor, choke position, governor linkage, and air filter."],
+["No spark","Check stop switch, ignition coil, plug, plug gap, flywheel key/magnet condition, wiring and grounds."],
+["Runs rough","Check fuel quality, carburetor, air filter, spark plug, governor and intake leaks."],
+["Overheats","Check cooling fins, debris, oil level, shrouding and operating load."],
+["Low power","Check air/fuel restriction, spark, compression, governor setting and muffler."],
+["Generator no output","Check engine speed, breakers/GFCI, connections, brushes/AVR or inverter system as applicable."],
+["Pressure washer low pressure","Check water supply, inlet screen, nozzle, hose restrictions, unloader and pump."],
+["Mower won't move","Check drive belt, pulleys, controls, transaxle/transmission fluid where applicable and parking brake."],
+["Deck won't engage","Check PTO switch, clutch, wiring, belt, idlers and safety interlocks."]
+];
+const MAINT=[
+["Every use","Inspect leaks, guards, controls, tires/blades and obvious damage."],
+["5–25 hours","Check oil level, air filter condition, fasteners and cooling debris according to engine manual."],
+["25–50 hours","Inspect belts, pulleys, linkage, battery connections and lubrication points as applicable."],
+["50–100 hours","Service oil/filter and spark plug/air cleaner according to the exact engine manual."],
+["Seasonal","Drain/stabilize fuel as appropriate, clean equipment, inspect battery and store according to manufacturer instructions."]
+];
+function v4Search(){
+ let q=($("globalSearch")?.value||"").trim().toLowerCase();
+ let pool=[];
+ Object.entries(CAT).forEach(([cat,rows])=>rows.forEach(r=>pool.push({cat,make:r[0],model:r[1],type:r[2],url:r[4]})));
+ let mine=S.equipment.map(e=>({cat:"My Equipment",make:e.make,model:e.model,type:e.engine,url:""}));
+ pool=[...mine,...pool].filter(x=>(x.make+" "+x.model+" "+x.type+" "+x.cat).toLowerCase().includes(q));
+ $("globalResults").innerHTML=pool.slice(0,40).map(x=>`<div class="item"><div><span class="pill">${esc(x.cat)}</span><h3>${esc(x.make)} ${esc(x.model)}</h3><small>${esc(x.type)}</small></div><button class="btn primary" onclick="${x.cat==="My Equipment"?"go('equipment')":`window.open('${x.url}','_blank')`}">${x.cat==="My Equipment"?"Open":"Manufacturer"}</button></div>`).join("")||"<div class='card'>No matches. Try a model number, make, or equipment type.</div>";
+}
+function openSearch(){
+ $("modal").classList.add("show");
+ $("panel").innerHTML=`<h2>🔎 Universal Equipment Search</h2><p class="muted">Search your equipment library and supported manufacturer reference groups.</p><input id="globalSearch" class="input" autofocus placeholder="Try: GX390, zero-turn, generator, pressure washer…"><div id="globalResults" class="catalog" style="margin-top:10px"></div><button class="btn" style="margin-top:12px" onclick="closeM()">Close</button>`;
+ $("globalSearch").oninput=v4Search;v4Search();
+}
+function openTroubleshoot(){
+ $("modal").classList.add("show");
+ $("panel").innerHTML=`<h2>🩺 Troubleshooter</h2><p class="muted">Select the symptom. These are general diagnostic starting points; use the exact service manual for specifications and safety procedures.</p><div class="catalog">${TROUBLE.map((t,i)=>`<button class="item" style="text-align:left;border:1px solid var(--l)" onclick="showTrouble(${i})"><div><b>${esc(t[0])}</b><small>${esc(t[1])}</small></div><span>›</span></button>`).join("")}</div><button class="btn" style="margin-top:12px" onclick="closeM()">Close</button>`;
+}
+function showTrouble(i){
+ let t=TROUBLE[i];
+ $("panel").innerHTML=`<h2>${esc(t[0])}</h2><div class="card"><b>Diagnostic starting points</b><p>${esc(t[1])}</p></div><div class="card"><b>Safety</b><p class="muted">Shut down equipment, remove the ignition key where applicable, disconnect spark-plug wires/battery as appropriate, relieve pressure from pressure-washer systems, and follow the manufacturer's service procedure.</p></div><div class="row"><button class="btn" onclick="openTroubleshoot()">Back</button><button class="btn" onclick="closeM()">Done</button></div>`;
+}
+function openMaintenanceGuide(){
+ $("modal").classList.add("show");
+ $("panel").innerHTML=`<h2>📅 Maintenance Guide</h2><p class="muted">Use this as a planning aid. Exact intervals vary by engine and equipment model.</p><div class="catalog">${MAINT.map(x=>`<div class="item"><div><b>${esc(x[0])}</b><small>${esc(x[1])}</small></div></div>`).join("")}</div><button class="btn" style="margin-top:12px" onclick="closeM()">Close</button>`;
+}
+function renderSaved(){
+ $("dashHistory").insertAdjacentHTML("afterend",`<div class="card" style="margin-top:12px"><div class="between"><b>Saved diagram pages</b><button class="btn" onclick="go('parts')">Open diagrams</button></div><p class="muted">${S.saved.length?S.saved.map(x=>"Page "+x).join(" • "):"No saved pages yet."}</p></div>`);
+}
 </script></body></html>
