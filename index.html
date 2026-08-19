@@ -1,333 +1,114 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07101f">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<title>Small Engine Pro</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07101f"><title>Small Engine Pro</title>
 <style>
-:root{
-  --navy:#07101f;--navy2:#0e1a2d;--blue:#2d72ff;--blue2:#eaf2ff;--text:#17233d;--muted:#6b7890;
-  --line:#d9e0ea;--bg:#f3f6fa;--card:#fff;--good:#1b8a4b;--warn:#ad6500;--bad:#b42318;
-  --shadow:0 8px 26px rgba(15,23,42,.08);--radius:18px;
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-body.dark{--navy:#050b15;--navy2:#0b1320;--text:#edf2fb;--muted:#9eabbd;--line:#273244;--bg:#0b1220;--card:#111a2a;--blue2:#142748}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-a{text-decoration:none;color:inherit}
-.app{min-height:100vh;padding-bottom:94px}
-.top{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,var(--navy),var(--navy2));color:#fff;border-bottom:1px solid #26354b}
-.topin{max-width:1120px;margin:auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:11px;min-width:0}.logo{font-size:34px}.brand h1{font-size:20px;margin:0;font-weight:900;letter-spacing:.2px}.brand p{margin:3px 0 0;color:#bdc7d7;font-size:12px;font-weight:650}
-.topactions{display:flex;gap:7px}.topbtn{border:1px solid #304056;background:#0c1729;color:#fff;border-radius:11px;padding:10px 12px;font-weight:800}.topbtn.hideMobile{display:block}
-main{max-width:1120px;margin:auto;padding:18px 14px 100px}.screen{display:none}.screen.active{display:block}
-.hero{border-radius:22px;background:linear-gradient(135deg,#0c1930,#19345b);color:#fff;padding:24px;box-shadow:var(--shadow);margin-bottom:16px}.hero h2{font-size:36px;margin:8px 0 6px;line-height:1.03}.hero p{margin:0;color:#ccd7e9}
-.sectionTitle{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900;margin:20px 2px 9px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);margin:12px 0}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.tile{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:17px;padding:15px;min-height:126px;box-shadow:var(--shadow)}.tile .ico{font-size:28px;display:block;margin-bottom:8px}.tile strong{font-size:15px}.tile small{display:block;color:var(--muted);margin-top:5px;line-height:1.35}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--shadow)}.kpi .n{font-size:29px;font-weight:900;margin-top:5px}.kpi .l{font-size:12px;color:var(--muted);font-weight:700}
-.input,.select,.textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:13px;background:var(--card);color:var(--text);outline:none}.textarea{min-height:96px;resize:vertical}.input:focus,.select:focus,.textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2d72ff18}
-.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.rowBetween{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-.btn{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:10px 13px;font-weight:800}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.soft{background:var(--blue2);color:var(--blue);border-color:#c8d9ff}.btn.danger{color:var(--bad)}.btn.success{color:var(--good)}
-.tag{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border-radius:999px;background:var(--blue2);color:var(--blue);font-size:11px;font-weight:900}.tag.good{background:#ddf8e8;color:var(--good)}.tag.warn{background:#fff3d7;color:var(--warn)}
-.muted{color:var(--muted)}.small{font-size:12px}
-.list{display:flex;flex-direction:column;gap:9px}.listitem{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;display:flex;align-items:center;justify-content:space-between;gap:12px}.listitem small{display:block;color:var(--muted);margin-top:3px}.listitem .actions{display:flex;gap:6px;flex-wrap:wrap}
-.empty{text-align:center;padding:28px 10px;color:var(--muted)}
-.progress{height:10px;border-radius:99px;background:#e7ebf2;overflow:hidden}.progress>div{height:100%;background:var(--blue);width:0}
-.modal{display:none;position:fixed;inset:0;background:#07101fb8;z-index:200;align-items:center;justify-content:center;padding:16px}.modal.show{display:flex}.modalPanel{width:min(720px,100%);max-height:92vh;overflow:auto;background:var(--card);border-radius:20px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.35);padding:18px}
-.checkRow{display:flex;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}.checkRow:last-child{border-bottom:0}.checkRow input{width:20px;height:20px;accent-color:var(--blue)}
-.history{display:flex;flex-direction:column}.historyItem{display:flex;gap:10px;padding:13px 0;border-bottom:1px solid var(--line)}.historyDot{width:11px;height:11px;border-radius:50%;background:var(--blue);margin-top:6px;flex:0 0 auto}
-.viewerCard{padding:0;overflow:hidden}.viewerHead{padding:14px}.viewer{height:min(66vh,720px);min-height:430px;background:#edf1f6;position:relative;overflow:hidden;touch-action:none;display:flex;align-items:center;justify-content:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.canvas{position:absolute;left:50%;top:50%;transform-origin:center;will-change:transform}.canvas img{display:block;max-width:none;width:auto;height:auto;user-select:none;-webkit-user-drag:none}
-.viewerStatus{text-align:center;padding:9px;color:var(--muted);font-size:12px;background:var(--card)}
-.controls{display:flex;justify-content:center;align-items:center;gap:7px;padding:12px;flex-wrap:wrap}.pageNum{font-weight:900;min-width:85px;text-align:center}.thumbs{display:flex;gap:8px;overflow-x:auto;padding:0 12px 14px}.thumb{flex:0 0 88px;border:2px solid var(--line);border-radius:10px;background:var(--card);padding:4px}.thumb.active{border-color:var(--blue)}.thumb img{width:100%;height:58px;object-fit:contain}.thumb div{text-align:center;font-size:11px;font-weight:900;padding:3px}
-.bottom{position:fixed;left:0;right:0;bottom:0;z-index:100;background:var(--navy);display:grid;grid-template-columns:repeat(6,1fr);padding:8px 3px calc(8px + env(safe-area-inset-bottom));border-top:1px solid #26364c}.nav{border:0;background:none;color:#95a4b8;font-size:10px;font-weight:800;padding:4px 1px}.nav span{display:block;font-size:20px;height:24px}.nav.active{color:#fff}
-.toast{position:fixed;left:50%;bottom:93px;transform:translateX(-50%) translateY(18px);background:#101827;color:#fff;padding:11px 15px;border-radius:12px;opacity:0;pointer-events:none;transition:.2s;z-index:220;font-weight:800}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.switch{width:44px;height:24px;border-radius:999px;background:#94a3b8;position:relative;border:0}.switch i{position:absolute;width:20px;height:20px;top:2px;left:2px;border-radius:50%;background:#fff;transition:.2s}.switch.on{background:var(--blue)}.switch.on i{left:22px}
-@media(max-width:700px){
-  .topbtn.hideMobile{display:none}.grid3,.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero h2{font-size:30px}.grid2{grid-template-columns:1fr}.viewer{height:calc(100vh - 340px);min-height:400px}
-}
-@media(min-width:900px){main{padding-top:26px}.hero h2{font-size:44px}}
+:root{--n:#07101f;--n2:#10203a;--b:#2d72ff;--b2:#eaf2ff;--bg:#f3f6fa;--c:#fff;--t:#17233d;--m:#68768d;--l:#dbe2ec;--good:#198754;--bad:#b42318;--sh:0 8px 25px #07101f12}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}body.dark{--bg:#0a1220;--c:#111b2b;--t:#eef3fb;--m:#a0adbf;--l:#2b3749;--b2:#142748}
+header{background:linear-gradient(135deg,var(--n),var(--n2));color:#fff;position:sticky;top:0;z-index:20}.head{max-width:1180px;margin:auto;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;font-size:20px}.brand small{display:block;color:#b9c7da;font-size:11px;margin-top:2px}.head button,.nav button{background:transparent;color:#fff;border:0;font-weight:800}
+main{max-width:1180px;margin:auto;padding:18px 14px 100px}.screen{display:none}.screen.active{display:block}
+.hero{background:linear-gradient(135deg,#0c1930,#1c3b6b);color:#fff;border-radius:22px;padding:25px;box-shadow:var(--sh)}h1,h2,h3{margin:0 0 6px}h2{font-size:30px}.sub{color:var(--m);margin-bottom:14px}.hero p{color:#d3ddec}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card,.tile{background:var(--c);border:1px solid var(--l);border-radius:17px;box-shadow:var(--sh);padding:15px}.tile{text-align:left;min-height:125px;cursor:pointer}.tile .ico{font-size:29px;display:block;margin-bottom:8px}.muted,small{color:var(--m)}.btn{border:1px solid var(--l);background:var(--c);color:var(--t);padding:10px 13px;border-radius:12px;font-weight:800}.btn.primary{background:var(--b);color:#fff;border-color:var(--b)}.btn.soft{background:var(--b2);color:var(--b)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.between{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.input,.select{width:100%;padding:13px;border:1px solid var(--l);border-radius:12px;background:var(--c);color:var(--t)}.pill{display:inline-block;border-radius:99px;background:var(--b2);color:var(--b);padding:5px 9px;font-size:11px;font-weight:900}.catalog{display:flex;flex-direction:column;gap:10px}.item{background:var(--c);border:1px solid var(--l);border-radius:15px;padding:14px;display:flex;justify-content:space-between;gap:12px;align-items:center}.item .actions{display:flex;gap:6px;flex-wrap:wrap}.kpi{background:var(--c);border:1px solid var(--l);border-radius:15px;padding:14px}.kpi b{font-size:27px;display:block;margin-top:4px}.viewer{height:min(68vh,720px);min-height:430px;background:#e9edf3;border:1px solid var(--l);border-radius:16px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;touch-action:none}.canvas{position:absolute;left:50%;top:50%;transform-origin:center}.canvas img{max-width:none;display:block}.thumbs{display:flex;overflow:auto;gap:8px;padding:10px 0}.thumb{border:2px solid var(--l);background:var(--c);border-radius:9px;padding:4px;min-width:80px}.thumb.active{border-color:var(--b)}.thumb img{width:70px;height:50px;object-fit:contain}.bottom{position:fixed;bottom:0;left:0;right:0;background:var(--n);display:grid;grid-template-columns:repeat(6,1fr);z-index:30;padding:7px 3px calc(7px + env(safe-area-inset-bottom))}.nav{border:0;background:transparent;color:#9caabd;font-size:10px;font-weight:800}.nav span{display:block;font-size:20px;height:23px}.nav.active{color:#fff}.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:15px;z-index:100}.modal.show{display:flex}.panel{background:var(--c);color:var(--t);width:min(700px,100%);max-height:92vh;overflow:auto;border-radius:19px;padding:18px}.toast{position:fixed;bottom:92px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:11px 15px;border-radius:12px;display:none;z-index:120}.toast.show{display:block}
+@media(min-width:800px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.item{align-items:flex-start;flex-direction:column}}
 </style>
-</head>
-<body>
-<div class="app">
-<header class="top"><div class="topin">
-  <div class="brand"><div class="logo">⚙️</div><div><h1>SMALL ENGINE PRO</h1><p>Fix it. Maintain it. Build it.</p></div></div>
-  <div class="topactions"><button class="topbtn hideMobile" onclick="openManual()">📖 Manual</button><button class="topbtn" onclick="toggleDark()">◐</button></div>
-</div></header>
-
+</head><body>
+<header><div class="head"><div class="brand">⚙️ SMALL ENGINE PRO<small>Workshop reference & equipment manager</small></div><div class="row"><button onclick="toggleDark()">◐</button><button onclick="openManual()">📖</button></div></div></header>
 <main>
 <section id="home" class="screen active">
-  <div class="hero"><span class="tag">WORKSHOP EDITION</span><h2>Your shop, in your pocket.</h2><p>Track engines, service work, diagrams, saved references and notes from one place.</p><div class="row" style="margin-top:16px"><button class="btn primary" onclick="go('dashboard')">Open Dashboard</button><button class="btn" onclick="go('equipment')">My Equipment</button></div></div>
-  <div class="sectionTitle">Quick access</div>
-  <div class="grid3">
-    <button class="tile" onclick="go('parts')"><span class="ico">⚙️</span><strong>Parts & Diagrams</strong><small>Real service-manual pages with zoom and pan.</small></button>
-    <button class="tile" onclick="go('equipment')"><span class="ico">🛠️</span><strong>Equipment</strong><small>Build profiles for each machine you own or repair.</small></button>
-    <button class="tile" onclick="go('maintenance')"><span class="ico">🔧</span><strong>Maintenance</strong><small>Checklists and service history.</small></button>
-    <button class="tile" onclick="go('search')"><span class="ico">🔎</span><strong>Search</strong><small>Find diagram pages and references.</small></button>
-    <button class="tile" onclick="go('lists')"><span class="ico">📋</span><strong>My Lists</strong><small>Saved diagrams, references and notes.</small></button>
-    <button class="tile" onclick="go('more')"><span class="ico">⚙️</span><strong>Settings & Data</strong><small>Backup, import, dark mode and app tools.</small></button>
-  </div>
-  <div class="sectionTitle">Current machine</div>
-  <div id="homeCurrent" class="card"></div>
-</section>
-
-<section id="dashboard" class="screen">
-  <div class="rowBetween"><div><h2>Workshop Dashboard</h2><div class="sub">Everything important at a glance.</div></div><span class="tag good">READY</span></div>
-  <div class="grid4" style="margin-top:14px">
-    <div class="kpi"><div class="l">Equipment</div><div class="n" id="kEquip">0</div></div>
-    <div class="kpi"><div class="l">Saved diagrams</div><div class="n" id="kSaved">0</div></div>
-    <div class="kpi"><div class="l">Service logs</div><div class="n" id="kLogs">0</div></div>
-    <div class="kpi"><div class="l">Maintenance</div><div class="n" id="kMaint">0%</div></div>
-  </div>
-  <div class="sectionTitle">Active equipment</div><div id="dashActive"></div>
-  <div class="sectionTitle">Recent activity</div><div class="card"><div id="dashActivity" class="history"></div></div>
-  <div class="sectionTitle">Quick actions</div><div class="row"><button class="btn primary" onclick="go('parts')">Open diagrams</button><button class="btn" onclick="go('maintenance')">Maintenance</button><button class="btn" onclick="openLogService()">Log service</button><button class="btn" onclick="go('lists')">My Lists</button></div>
-</section>
-
-<section id="search" class="screen">
-  <h2>Search</h2><div class="sub">Find service-manual pages and saved references.</div>
-  <div class="card"><input id="searchBox" class="input" placeholder="Search page, component, keyword…" autocomplete="off"></div>
-  <div id="searchResults" class="list"></div>
-</section>
-
-<section id="parts" class="screen">
-  <div class="rowBetween"><div><h2>Parts & Diagrams</h2><div class="sub">Kohler CV620–CV730 service-manual artwork</div></div><button class="btn" onclick="openManual()">📖 Manual</button></div>
-  <div class="card viewerCard">
-    <div class="viewerHead"><div class="row"><button class="btn primary" onclick="fit()">Fit</button><button class="btn" onclick="zoom(1.25)">＋</button><button class="btn" onclick="zoom(.8)">−</button><button class="btn" onclick="resetView()">Reset</button><button class="btn" onclick="saveCurrentPage()">⭐ Save</button><button class="btn" onclick="noteCurrentPage()">📝 Note</button></div></div>
-    <div class="viewer" id="viewer"><div class="canvas" id="canvas"><img id="diagram" alt="Kohler service-manual diagram"></div></div>
-    <div id="viewerStatus" class="viewerStatus">Loading…</div>
-    <div class="controls"><button class="btn" onclick="setPage(index-1)">‹</button><div class="pageNum" id="pageNum">Page 58</div><button class="btn" onclick="setPage(index+1)">›</button></div>
-    <div class="thumbs" id="thumbs"></div>
-  </div>
-  <div class="card"><div class="rowBetween"><div><strong id="pageTitle">Page 58</strong><div id="pageCaption" class="muted">Breather / oil pan / piston components</div></div><span class="tag">MANUFACTURER ARTWORK</span></div></div>
-</section>
-
-<section id="equipment" class="screen">
-  <div class="rowBetween"><div><h2>Equipment</h2><div class="sub">Create a profile for every machine in your shop.</div></div><button class="btn primary" onclick="openEquipmentModal()">＋ Add equipment</button></div>
-  <div id="equipmentList" class="list"></div>
-  <div id="equipmentEmpty" class="card empty" style="display:none">No equipment yet. Add your first machine.</div>
-</section>
-
-<section id="equipmentDetail" class="screen"><div id="equipmentDetailView"></div></section>
-
-<section id="maintenance" class="screen">
-  <div class="rowBetween"><div><h2>Maintenance</h2><div class="sub">Track tasks and build service history.</div></div><button class="btn primary" onclick="openLogService()">＋ Log service</button></div>
-  <div class="card"><div class="rowBetween"><strong id="maintTitle">Current equipment</strong><span class="tag" id="maintPct">0% COMPLETE</span></div><div class="progress" style="margin-top:10px"><div id="maintBar"></div></div><div id="maintenanceList" style="margin-top:10px"></div></div>
-  <div class="card"><div class="rowBetween"><strong>Service history</strong><button class="btn" onclick="openLogService()">＋ Add entry</button></div><div id="serviceHistory" class="history" style="margin-top:8px"></div></div>
-</section>
-
-<section id="lists" class="screen">
-  <h2>My Lists</h2><div class="sub">Everything you saved for later.</div>
-  <div class="sectionTitle">Saved diagrams</div><div id="savedPages" class="list"></div>
-  <div class="sectionTitle">Notes</div><div id="notesList" class="list"></div>
-</section>
-
-<section id="more" class="screen">
-  <h2>Settings & Data</h2><div class="sub">Customize the app and protect your data.</div>
-  <div class="card">
-    <div class="rowBetween"><div><strong>Dark mode</strong><div class="muted small">Use a darker workshop-friendly interface.</div></div><button id="darkSwitch" class="switch" onclick="toggleDark()"><i></i></button></div>
-  </div>
-  <div class="card"><strong>Data backup</strong><div class="muted small" style="margin:5px 0 12px">Export your equipment, notes, service history and saved pages.</div><div class="row"><button class="btn primary" onclick="exportData()">⬇️ Export backup</button><label class="btn">⬆️ Import backup<input id="importFile" type="file" accept=".json,application/json" style="display:none" onchange="importData(this)"></label></div></div>
-  <div class="card"><strong>Manufacturer manual</strong><div class="muted small" style="margin:5px 0 12px">Open the local service manual included with this app.</div><button class="btn primary" onclick="openManual()">📖 Open manual</button></div>
-  <div class="card"><strong>Reset local data</strong><div class="muted small" style="margin:5px 0 12px">Clears equipment, notes, service history and saved pages from this device.</div><button class="btn danger" onclick="resetAll()">Clear local data</button></div>
-</section>
-</main>
-
-<nav class="bottom">
-<button class="nav active" data-go="home"><span>⌂</span>Home</button>
-<button class="nav" data-go="dashboard"><span>▦</span>Dash</button>
-<button class="nav" data-go="parts"><span>⚙️</span>Parts</button>
-<button class="nav" data-go="equipment"><span>🛠️</span>Equipment</button>
-<button class="nav" data-go="lists"><span>📋</span>Lists</button>
-<button class="nav" data-go="more"><span>•••</span>More</button>
-</nav>
-<div id="toast" class="toast"></div>
-
-<div id="modal" class="modal"><div class="modalPanel" id="modalPanel"></div></div>
-
-<script>
-const PAGES=[58,60,62,63,65,66,68,75,79,80,85];
-const PAGE_INFO={
-58:"Breather / oil pan / piston components",
-60:"Cylinder head / valve train",
-62:"Cylinder head / related components",
-63:"Crankcase / main components",
-65:"Breather / oil pan / piston components",
-66:"Full engine exploded assembly",
-68:"Flywheel / governor components",
-75:"Full engine exploded assembly",
-79:"Breather / oil pan / piston components",
-80:"Crankcase / main components",
-85:"Carburetor / fuel system components"
-};
-const DEFAULT_MAINT=["Check engine oil","Inspect air cleaner","Inspect spark plugs","Inspect fuel lines","Clean cooling fins","Check battery/charging","Inspect belts/pulleys","Check for leaks"];
-let state=JSON.parse(localStorage.getItem("sep_v2_state")||"null")||{
-  dark:false,
-  activeEquipmentId:null,
-  equipment:[],
-  notes:[],
-  savedPages:[],
-  serviceHistory:[],
-  maintenance:{}
-};
-const $=id=>document.getElementById(id);
-function save(){localStorage.setItem("sep_v2_state",JSON.stringify(state))}
-function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-function toast(t){$("toast").textContent=t;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1800)}
-function go(id){
-  document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));
-  document.querySelectorAll(".nav").forEach(n=>n.classList.toggle("active",n.dataset.go===id));
-  window.scrollTo(0,0);
-  if(id==="dashboard")renderDashboard();
-  if(id==="equipment")renderEquipment();
-  if(id==="maintenance")renderMaintenance();
-  if(id==="lists")renderLists();
-}
-document.querySelectorAll(".nav").forEach(n=>n.onclick=()=>go(n.dataset.go));
-function openModal(html){$("modalPanel").innerHTML=html;$("modal").classList.add("show")}
-function closeModal(){$("modal").classList.remove("show")}
-$("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()})
-function toggleDark(){state.dark=!state.dark;document.body.classList.toggle("dark",state.dark);$("darkSwitch")?.classList.toggle("on",state.dark);save()}
-function currentEquipment(){return state.equipment.find(e=>e.id===state.activeEquipmentId)||state.equipment[0]||null}
-function ensureEquipment(){
-  if(!state.equipment.length){
-    const e={id:crypto.randomUUID?.()||String(Date.now()),make:"Kohler",model:"CV730",engine:"Kohler CV730",serial:"",hours:"",notes:"",created:new Date().toISOString()};
-    state.equipment.push(e);state.activeEquipmentId=e.id;save();
-  } else if(!state.activeEquipmentId) {state.activeEquipmentId=state.equipment[0].id;save()}
-}
-function equipmentCard(e){
-  return `<div class="listitem"><div><strong>${esc(e.make)} ${esc(e.model)}</strong><small>${esc(e.engine||"Engine not set")} ${e.serial?`• S/N ${esc(e.serial)}`:""}</small></div><div class="actions"><button class="btn" onclick="openEquipmentDetail('${e.id}')">Open</button><button class="btn danger" onclick="deleteEquipment('${e.id}')">Delete</button></div></div>`
-}
-function renderEquipment(){
-  ensureEquipment();$("equipmentList").innerHTML=state.equipment.map(equipmentCard).join("");
-}
-function openEquipmentModal(eid=null){
-  const e=eid?state.equipment.find(x=>x.id===eid):null;
-  openModal(`<div class="rowBetween"><h2 style="margin:0">${e?"Edit":"Add"} equipment</h2><button class="btn" onclick="closeModal()">×</button></div>
-  <div class="grid2" style="margin-top:14px">
-    <input id="fMake" class="input" placeholder="Make" value="${esc(e?.make||"")}">
-    <input id="fModel" class="input" placeholder="Model" value="${esc(e?.model||"")}">
-    <input id="fEngine" class="input" placeholder="Engine" value="${esc(e?.engine||"")}">
-    <input id="fSerial" class="input" placeholder="Serial number" value="${esc(e?.serial||"")}">
-    <input id="fHours" class="input" placeholder="Hours" inputmode="decimal" value="${esc(e?.hours||"")}">
-  </div>
-  <textarea id="fNotes" class="textarea" style="margin-top:12px" placeholder="Notes">${esc(e?.notes||"")}</textarea>
-  <div class="row" style="margin-top:12px"><button class="btn primary" onclick="saveEquipmentForm('${e?.id||""}')">Save equipment</button><button class="btn" onclick="closeModal()">Cancel</button></div>`)
-}
-function saveEquipmentForm(id){
-  const item={id:id||crypto.randomUUID?.()||String(Date.now()),make:$("fMake").value.trim()||"Unknown",model:$("fModel").value.trim()||"Unknown",engine:$("fEngine").value.trim(),serial:$("fSerial").value.trim(),hours:$("fHours").value.trim(),notes:$("fNotes").value.trim(),created:new Date().toISOString()};
-  const existing=state.equipment.findIndex(e=>e.id===item.id);
-  if(existing>=0)state.equipment[existing]=item;else state.equipment.push(item);
-  state.activeEquipmentId=item.id;save();closeModal();renderEquipment();renderDashboard();renderHomeCurrent();toast("Equipment saved")
-}
-function openEquipmentDetail(id){
-  state.activeEquipmentId=id;save();const e=state.equipment.find(x=>x.id===id);if(!e)return;
-  $("equipmentDetailView").innerHTML=`<div class="rowBetween"><div><h2>${esc(e.make)} ${esc(e.model)}</h2><div class="sub">${esc(e.engine||"Engine not specified")}</div></div><div class="row"><button class="btn" onclick="openEquipmentModal('${e.id}')">Edit</button><button class="btn primary" onclick="go('parts')">Parts</button></div></div>
-  <div class="grid3" style="margin-top:14px">
-    <div class="kpi"><div class="l">Serial</div><div class="n" style="font-size:20px">${esc(e.serial||"—")}</div></div>
-    <div class="kpi"><div class="l">Hours</div><div class="n" style="font-size:20px">${esc(e.hours||"—")}</div></div>
-    <div class="kpi"><div class="l">Service logs</div><div class="n" style="font-size:20px">${state.serviceHistory.filter(s=>s.equipmentId===e.id).length}</div></div>
-  </div>
-  <div class="card"><strong>Notes</strong><p class="muted">${esc(e.notes||"No notes yet.")}</p><button class="btn" onclick="openEquipmentModal('${e.id}')">Edit notes</button></div>
-  <div class="card"><strong>Tools</strong><div class="row" style="margin-top:10px"><button class="btn primary" onclick="go('parts')">⚙️ Diagrams</button><button class="btn" onclick="go('maintenance')">🔧 Maintenance</button><button class="btn" onclick="openLogService()">＋ Log service</button></div></div>`;
-  go("equipmentDetail");
-}
-function deleteEquipment(id){if(state.equipment.length===1){toast("Keep at least one equipment profile");return}if(!confirm("Delete this equipment profile?"))return;state.equipment=state.equipment.filter(e=>e.id!==id);if(state.activeEquipmentId===id)state.activeEquipmentId=state.equipment[0].id;save();renderEquipment();renderDashboard();renderHomeCurrent();toast("Equipment deleted")}
-function openLogService(){
-  ensureEquipment();const e=currentEquipment();
-  openModal(`<div class="rowBetween"><h2 style="margin:0">Log service</h2><button class="btn" onclick="closeModal()">×</button></div>
-  <div class="muted" style="margin:4px 0 14px">${esc(e.make)} ${esc(e.model)}</div>
-  <input id="sTask" class="input" placeholder="What did you do? e.g. changed oil">
-  <input id="sHours" class="input" style="margin-top:10px" placeholder="Hour meter (optional)" value="${esc(e.hours||"")}">
-  <textarea id="sNotes" class="textarea" style="margin-top:10px" placeholder="Notes / parts used / observations"></textarea>
-  <div class="row" style="margin-top:12px"><button class="btn primary" onclick="saveService()">Save service</button><button class="btn" onclick="closeModal()">Cancel</button></div>`)
-}
-function saveService(){
-  const e=currentEquipment(),task=$("sTask").value.trim();if(!task){toast("Enter the service performed");return}
-  state.serviceHistory.unshift({id:crypto.randomUUID?.()||String(Date.now()),equipmentId:e.id,task,hours:$("sHours").value.trim(),notes:$("sNotes").value.trim(),date:new Date().toISOString()});
-  if($("sHours").value.trim())e.hours=$("sHours").value.trim();
-  save();closeModal();renderDashboard();renderMaintenance();openEquipmentDetail(e.id);toast("Service logged")
-}
-function serviceHistoryHtml(eid){
-  const arr=state.serviceHistory.filter(x=>x.equipmentId===eid);
-  if(!arr.length)return `<div class="empty">No service history yet.</div>`;
-  return arr.map(x=>`<div class="historyItem"><div class="historyDot"></div><div style="flex:1"><strong>${esc(x.task)}</strong><div class="muted small">${new Date(x.date).toLocaleString()}${x.hours?` • ${esc(x.hours)} hrs`:""}</div>${x.notes?`<div class="small" style="margin-top:4px">${esc(x.notes)}</div>`:""}</div><button class="btn danger" onclick="deleteService('${x.id}')">Delete</button></div>`).join("")
-}
-function deleteService(id){if(!confirm("Delete this service record?"))return;state.serviceHistory=state.serviceHistory.filter(x=>x.id!==id);save();renderDashboard();renderMaintenance();toast("Service record deleted")}
-function maintenanceState(eid){return state.maintenance[eid]||{done:{}}}
-function renderMaintenance(){
-  ensureEquipment();const e=currentEquipment(),m=maintenanceState(e.id),done=Object.values(m.done).filter(Boolean).length,total=DEFAULT_MAINT.length,pct=Math.round(done/total*100);
-  $("maintTitle").textContent=`${e.make} ${e.model}`;
-  $("maintPct").textContent=`${pct}% COMPLETE`;$("maintBar").style.width=pct+"%";
-  $("maintenanceList").innerHTML=DEFAULT_MAINT.map((t,i)=>`<label class="checkRow"><input type="checkbox" ${m.done[i]?"checked":""} onchange="toggleMaintenance(${i},this.checked)"><div><strong>${esc(t)}</strong><div class="muted small">${m.done[i]?"Completed":"Not completed"}</div></div></label>`).join("");
-  $("serviceHistory").innerHTML=serviceHistoryHtml(e.id)
-}
-function toggleMaintenance(i,val){const e=currentEquipment();const m=maintenanceState(e.id);m.done[i]=val;state.maintenance[e.id]=m;save();renderMaintenance();renderDashboard()}
-function renderLists(){
-  $("savedPages").innerHTML=state.savedPages.length?state.savedPages.map(p=>`<div class="listitem"><div><strong>Page ${p}</strong><small>${esc(PAGE_INFO[p]||"Service diagram")}</small></div><div class="actions"><button class="btn" onclick="setPage(PAGES.indexOf(${p}));go('parts')">Open</button><button class="btn danger" onclick="removeSaved(${p})">Remove</button></div></div>`).join(""):`<div class="card empty">No saved diagrams yet.</div>`;
-  $("notesList").innerHTML=state.notes.length?state.notes.map((n,i)=>`<div class="listitem"><div><strong>Page ${n.page}</strong><small>${esc(n.text)} • ${new Date(n.date).toLocaleDateString()}</small></div><button class="btn danger" onclick="removeNote(${i})">Delete</button></div>`).join(""):`<div class="card empty">No notes yet.</div>`
-}
-function removeSaved(p){state.savedPages=state.savedPages.filter(x=>x!==p);save();renderLists();renderDashboard()}
-function removeNote(i){state.notes.splice(i,1);save();renderLists();renderDashboard()}
-function saveCurrentPage(){const p=PAGES[index];if(!state.savedPages.includes(p))state.savedPages.push(p);save();renderLists();renderDashboard();toast(`Page ${p} saved`)}
-function noteCurrentPage(){const text=prompt("Enter your note for this diagram:");if(!text)return;state.notes.unshift({page:PAGES[index],text,date:new Date().toISOString(),equipmentId:currentEquipment()?.id||null});save();renderLists();renderDashboard();toast("Note saved")}
-function renderDashboard(){
-  ensureEquipment();const saved=state.savedPages.length,logs=state.serviceHistory.length,eq=state.equipment.length;
-  let e=currentEquipment(),m=maintenanceState(e.id),done=Object.values(m.done).filter(Boolean).length,pct=Math.round(done/DEFAULT_MAINT.length*100);
-  $("kEquip").textContent=eq;$("kSaved").textContent=saved;$("kLogs").textContent=logs;$("kMaint").textContent=pct+"%";
-  $("dashActive").innerHTML=equipmentCard(e);
-  const items=[];
-  state.serviceHistory.slice(0,5).forEach(s=>items.push({d:s.date,t:`Service: ${s.task}`}));
-  state.notes.slice(0,5).forEach(n=>items.push({d:n.date,t:`Note: ${n.text}`}));
-  items.sort((a,b)=>new Date(b.d)-new Date(a.d));
-  $("dashActivity").innerHTML=items.slice(0,8).map(x=>`<div class="historyItem"><div class="historyDot"></div><div><strong>${esc(x.t)}</strong><div class="muted small">${new Date(x.d).toLocaleString()}</div></div></div>`).join("")||`<div class="empty">Your service activity will appear here.</div>`
-}
-function renderHomeCurrent(){ensureEquipment();const e=currentEquipment();$("homeCurrent").innerHTML=`<div class="rowBetween"><div><strong>${esc(e.make)} ${esc(e.model)}</strong><div class="muted small">${esc(e.engine||"Engine not specified")}</div></div><button class="btn primary" onclick="openEquipmentDetail('${e.id}')">Open</button></div>`}
-function equipmentCard(e){return `<div class="card"><div class="rowBetween"><div><span class="tag">ACTIVE</span><h3 style="margin:8px 0 3px">${esc(e.make)} ${esc(e.model)}</h3><div class="muted">${esc(e.engine||"Engine not specified")}</div></div><div class="row"><button class="btn" onclick="openEquipmentDetail('${e.id}')">Open</button><button class="btn" onclick="openEquipmentModal('${e.id}')">Edit</button></div></div><div class="grid3" style="margin-top:12px"><div><div class="muted small">Serial</div><strong>${esc(e.serial||"—")}</strong></div><div><div class="muted small">Hours</div><strong>${esc(e.hours||"—")}</strong></div><div><div class="muted small">Logs</div><strong>${state.serviceHistory.filter(s=>s.equipmentId===e.id).length}</strong></div></div></div>`}
-function renderEquipment(){ensureEquipment();$("equipmentList").innerHTML=state.equipment.map(e=>equipmentCard(e)).join("")}
-function exportData(){
-  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="small-engine-pro-backup.json";a.click();URL.revokeObjectURL(u);toast("Backup exported")
-}
-function importData(input){
-  const f=input.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d||!Array.isArray(d.equipment))throw new Error();state=d;save();renderAll();toast("Backup imported")}catch(e){toast("Invalid backup file")}};r.readAsText(f)
-}
-function resetAll(){if(!confirm("Clear all Small Engine Pro data on this device?"))return;localStorage.removeItem("sep_v2_state");location.reload()}
-function openManual(){location.href="Kohler_CV620_CV730_Service_Manual.pdf"}
-
-let index=0,scale=1,x=0,y=0,startX=0,startY=0,moved=false,pointers=new Map(),startDist=0,startScale=1;
-const viewer=$("viewer"),img=$("diagram"),canvas=$("canvas");
-function src(p){return`page-${p}.png`}
-function transform(){canvas.style.transform=`translate(-50%,-50%) translate(${x}px,${y}px) scale(${scale})`}
-function fit(){const nw=img.naturalWidth||1000,nh=img.naturalHeight||700;scale=Math.max(.05,Math.min(2,(viewer.clientWidth-28)/nw,(viewer.clientHeight-28)/nh));x=0;y=0;transform()}
-function zoom(f){scale=Math.max(.1,Math.min(8,scale*f));transform()}
-function resetView(){scale=1;x=0;y=0;fit()}
-function setPage(i){index=(i+PAGES.length)%PAGES.length;localStorage.setItem("sep_v2_last_page",PAGES[index]);x=0;y=0;scale=1;img.src=src(PAGES[index]);$("pageNum").textContent=`Page ${PAGES[index]}`;$("pageTitle").textContent=`Page ${PAGES[index]}`;$("pageCaption").textContent=PAGE_INFO[PAGES[index]]||"Service-manual diagram";document.querySelectorAll(".thumb").forEach((t,j)=>t.classList.toggle("active",j===index))}
-img.onload=()=>{$("viewerStatus").textContent=`Page ${PAGES[index]} • ${img.naturalWidth} × ${img.naturalHeight}`;fit()}
-img.onerror=()=>{$("viewerStatus").textContent=`Could not load ${src(PAGES[index])}. The PNG must be beside index.html.`}
-PAGES.forEach((p,i)=>{const b=document.createElement("button");b.className="thumb";b.innerHTML=`<img src="${src(p)}" alt="Page ${p}"><div>${p}</div>`;b.onclick=()=>setPage(i);$("thumbs").appendChild(b)})
-function pd(e){pointers.set(e.pointerId,e);viewer.setPointerCapture(e.pointerId);startX=e.clientX;startY=e.clientY;moved=false}
-function pm(e){pointers.set(e.pointerId,e);if(pointers.size===2){const a=[...pointers.values()][0],b=[...pointers.values()][1],d=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);if(!startDist){startDist=d;startScale=scale}scale=Math.max(.1,Math.min(8,startScale*d/startDist));transform();return}const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.abs(dx)+Math.abs(dy)>4)moved=true;if(moved){x+=dx;y+=dy;startX=e.clientX;startY=e.clientY;transform()}}
-function pu(e){pointers.delete(e.pointerId);if(pointers.size<2)startDist=0;if(!moved&&e.pointerType==="touch"){if(e.clientX<viewer.clientWidth*.25)setPage(index-1);else if(e.clientX>viewer.clientWidth*.75)setPage(index+1)}}
-viewer.addEventListener("pointerdown",pd);viewer.addEventListener("pointermove",pm);viewer.addEventListener("pointerup",pu);viewer.addEventListener("pointercancel",pu);
-let lastTap=0;viewer.addEventListener("click",()=>{const now=Date.now();if(now-lastTap<300)zoom(1.65);lastTap=now})
-window.addEventListener("resize",()=>fit())
-
-$("searchBox").addEventListener("input",e=>{
-  const q=e.target.value.trim().toLowerCase();
-  const rows=PAGES.map(p=>[p,PAGE_INFO[p]||"Service-manual diagram"]).filter(x=>!q||(x[0]+" "+x[1]).toLowerCase().includes(q));
-  $("searchResults").innerHTML=rows.map(x=>`<div class="listitem"><div><strong>Page ${x[0]}</strong><small>${esc(x[1])}</small></div><button class="btn primary" onclick="setPage(PAGES.indexOf(${x[0]}));go('parts')">Open</button></div>`).join("")||`<div class="card empty">No matches.</div>`
-})
-function renderAll(){state.dark=!!state.dark;document.body.classList.toggle("dark",state.dark);$("darkSwitch")?.classList.toggle("on",state.dark);renderHomeCurrent();renderDashboard();renderEquipment();renderMaintenance();renderLists()}
-document.body.classList.toggle("dark",state.dark);ensureEquipment();renderAll();
-const last=Number(localStorage.getItem("sep_v2_last_page")||58);index=Math.max(0,PAGES.indexOf(last));setPage(index);
-</script>
+<div class="hero"><span class="pill">COMPLETE WORKSHOP EDITION</span><h1 style="font-size:40px;margin-top:10px">One app for the whole shop.</h1><p>Engines, mowers, generators, pressure washers, outdoor power equipment, manuals, parts lookups, diagrams and service history.</p><div class="row"><button class="btn primary" onclick="go('catalog')">Browse equipment</button><button class="btn" onclick="go('dashboard')">Dashboard</button></div></div>
+<div style="margin-top:18px" class="grid">
+<button class="tile" onclick="go('catalog')"><span class="ico">🧰</span><b>Equipment Library</b><small>Engines, lawn equipment, pressure washers, generators and more.</small></button>
+<button class="tile" onclick="go('parts')"><span class="ico">⚙️</span><b>Diagrams</b><small>Open your local manufacturer diagram pages with zoom and pan.</small></button>
+<button class="tile" onclick="go('lookup')"><span class="ico">🔎</span><b>Manual & Parts Lookup</b><small>Jump directly to official manufacturer lookup systems.</small></button>
+<button class="tile" onclick="go('equipment')"><span class="ico">🛠️</span><b>My Equipment</b><small>Track every machine in your personal shop.</small></button>
+<button class="tile" onclick="go('maintenance')"><span class="ico">🔧</span><b>Maintenance</b><small>Service checklists and history by machine.</small></button>
+<button class="tile" onclick="go('more')"><span class="ico">💾</span><b>Backup & Settings</b><small>Protect your data and customize the app.</small></button>
 </div>
-</body>
-</html>
+</section>
+
+<section id="dashboard" class="screen"><div class="between"><div><h2>Dashboard</h2><div class="sub">Your shop at a glance.</div></div><button class="btn primary" onclick="openService()">＋ Service</button></div>
+<div class="grid4"><div class="kpi">Machines<b id="dk1">0</b></div><div class="kpi">Saved pages<b id="dk2">0</b></div><div class="kpi">Service logs<b id="dk3">0</b></div><div class="kpi">Library categories<b>5</b></div></div>
+<div class="card" style="margin-top:12px"><b>Current machine</b><div id="dashMachine" style="margin-top:10px"></div></div>
+<div class="card"><b>Recent service</b><div id="dashHistory" style="margin-top:8px"></div></div></section>
+
+<section id="catalog" class="screen"><h2>Equipment Library</h2><div class="sub">Start broad, then identify the exact model before using model-specific parts.</div>
+<div class="grid4" id="categoryTiles"></div><div class="card" style="margin-top:12px"><input id="catalogSearch" class="input" placeholder="Search make, model family, category…"></div><div id="catalogResults" class="catalog"></div></section>
+
+<section id="lookup" class="screen"><h2>Manual & Parts Lookup</h2><div class="sub">These buttons take you to official manufacturer resources for the exact model and serial number.</div><div id="lookupList" class="catalog"></div></section>
+
+<section id="parts" class="screen"><div class="between"><div><h2>Parts & Diagrams</h2><div class="sub">Your local service-manual pages.</div></div><button class="btn" onclick="openManual()">📖 PDF Manual</button></div>
+<div class="card"><div class="row"><button class="btn primary" onclick="fit()">Fit</button><button class="btn" onclick="zoom(1.3)">＋</button><button class="btn" onclick="zoom(.77)">−</button><button class="btn" onclick="fit()">Reset</button><button class="btn" onclick="savePage()">⭐ Save</button></div><div id="viewer" class="viewer" style="margin-top:10px"><div id="canvas" class="canvas"><img id="diagram"></div></div><div class="between" style="padding-top:10px"><button class="btn" onclick="setPage(pi-1)">‹</button><b id="pageNum">Page 58</b><button class="btn" onclick="setPage(pi+1)">›</button></div><div id="thumbs" class="thumbs"></div><small id="status"></small></div></section>
+
+<section id="equipment" class="screen"><div class="between"><div><h2>My Equipment</h2><div class="sub">Keep your own machines organized.</div></div><button class="btn primary" onclick="addEquipment()">＋ Add</button></div><div id="equipmentList" class="catalog"></div></section>
+
+<section id="maintenance" class="screen"><div class="between"><div><h2>Maintenance</h2><div class="sub">Simple checklist + service records.</div></div><button class="btn primary" onclick="openService()">＋ Log service</button></div><div class="card"><b id="maintName">Current machine</b><div id="checks" style="margin-top:8px"></div></div><div class="card"><b>Service history</b><div id="history"></div></div></section>
+
+<section id="more" class="screen"><h2>Settings & Data</h2><div class="card"><b>Backup</b><p class="muted">Export everything you entered into the app.</p><div class="row"><button class="btn primary" onclick="backup()">⬇️ Export</button><label class="btn">⬆️ Import<input type="file" accept=".json" style="display:none" onchange="restore(this)"></label></div></div><div class="card"><b>Reset</b><p class="muted">Clear all local app data.</p><button class="btn" onclick="resetAll()">Clear data</button></div></section>
+</main>
+<nav class="bottom"><button class="nav active" data-go="home"><span>⌂</span>Home</button><button class="nav" data-go="dashboard"><span>▦</span>Dash</button><button class="nav" data-go="catalog"><span>🧰</span>Library</button><button class="nav" data-go="parts"><span>⚙️</span>Parts</button><button class="nav" data-go="equipment"><span>🛠️</span>My Gear</button><button class="nav" data-go="more"><span>•••</span>More</button></nav>
+<div id="modal" class="modal"><div class="panel" id="panel"></div></div><div id="toast" class="toast"></div>
+<script>
+const CAT={"Engines":[["Kohler","CV620\u2013CV730","V-Twin","Kohler manuals / parts","https://www.kohler.com/en/support"],["Briggs & Stratton","Classic / Quantum / Intek / Professional","Small engine","Briggs manuals & parts","https://www.briggsandstratton.com/en-us/support/manuals"],["Honda","GX120 / GX160 / GX200 / GX240 / GX270 / GX340 / GX390","GX commercial","Honda manuals & service","https://engines.honda.com/support-and-service"],["Honda","GCV135 / GCV160 / GCV170 / GCV190 / GCV200","Residential","Honda manuals","https://engines.honda.com/support-and-service/owners-manuals"],["Honda","GX610 / GX620 / GX630 / GX640 / GX660 / GX670 / GX690","V-Twin","Honda manuals & service","https://engines.honda.com/support-and-service"],["Briggs & Stratton","Vanguard","Commercial","Briggs manuals & parts","https://www.briggsandstratton.com/en-us/support/manuals"],["Generac","Portable / standby engines","Generator engines","Generac support","https://www.generac.com/service-support"]],"Lawn Equipment":[["Toro","Walk-behind mowers","Mower","Toro parts & manuals","https://www.toro.com/en/parts"],["Toro","TimeCutter / Z Master","Zero-turn","Toro parts & manuals","https://www.toro.com/en/parts"],["Cub Cadet","Push / riding / zero-turn","Mower","Cub Cadet manuals","https://www.cubcadet.com/en_US/operatorsmanuals"],["Troy-Bilt","Push / riding / zero-turn","Mower","Troy-Bilt support","https://www.troybilt.com/en_US/support"],["John Deere","Lawn tractors / zero-turn","Mower","John Deere manuals & parts","https://www.deere.com/en/parts-and-service/"],["Husqvarna","Walk-behind / riding / zero-turn","Mower","Husqvarna support","https://www.husqvarna.com/us/support/"],["Exmark","Walk-behind / zero-turn","Commercial mower","Exmark manuals & parts","https://www.exmark.com/support"],["Bad Boy","Mowers / zero-turn","Commercial mower","Bad Boy support","https://www.badboymowers.com/"]],"Pressure Washers":[["Briggs & Stratton","Gas pressure washers","Pressure washer","Briggs support","https://www.briggsandstratton.com/en-us/support"],["Simpson","Residential / commercial","Pressure washer","Simpson support","https://simpsoncleaning.com/support/"],["Generac","Pressure washers","Pressure washer","Generac support","https://www.generac.com/service-support"],["Kohler","Engine-powered equipment","Engine","Kohler support","https://www.kohler.com/en/support"]],"Generators":[["Generac","Portable generators","Generator","Generac support","https://www.generac.com/service-support"],["Generac","Home standby generators","Standby","Generac support","https://www.generac.com/service-support"],["Briggs & Stratton","Portable generators","Generator","Briggs support","https://www.briggsandstratton.com/en-us/support"],["Honda","EU / EB / EG series","Generator","Honda engine support","https://engines.honda.com/support-and-service"]],"Other Outdoor Power":[["Briggs & Stratton","Snow blower engines","Snow equipment","Briggs support","https://www.briggsandstratton.com/en-us/support"],["Cub Cadet","Snow blowers","Snow equipment","Cub Cadet manuals","https://www.cubcadet.com/en_US/operatorsmanuals"],["Troy-Bilt","Tillers / trimmers / blowers","Outdoor power","Troy-Bilt support","https://www.troybilt.com/en_US/support"],["Husqvarna","Chainsaws / trimmers / blowers","Outdoor power","Husqvarna support","https://www.husqvarna.com/us/support/"]]};
+const LOOKUPS=[
+["Briggs & Stratton","Manuals + illustrated parts lists","https://www.briggsandstratton.com/en-us/support/manuals"],
+["Honda Engines","Owner manuals + service resources","https://engines.honda.com/support-and-service"],
+["Kohler","Engine support / manuals","https://www.kohler.com/en/support"],
+["Toro","Parts, manuals & diagrams lookup","https://www.toro.com/en/parts"],
+["Cub Cadet","Operator manuals","https://www.cubcadet.com/en_US/operatorsmanuals"],
+["Troy-Bilt","Product support","https://www.troybilt.com/en_US/support"],
+["John Deere","Parts & service","https://www.deere.com/en/parts-and-service/"],
+["Husqvarna","Support / manuals","https://www.husqvarna.com/us/support/"],
+["Generac","Generator / pressure washer support","https://www.generac.com/service-support"],
+["Simpson","Pressure washer support","https://simpsoncleaning.com/support/"],
+["Exmark","Support / manuals","https://www.exmark.com/support"]
+];
+const PAGES=[58,60,62,63,65,66,68,75,79,80,85], INFO={58:"Breather / oil pan / piston",60:"Cylinder head / valve train",62:"Cylinder head components",63:"Crankcase / main components",65:"Breather / oil pan / piston",66:"Engine exploded assembly",68:"Flywheel / governor",75:"Engine exploded assembly",79:"Breather / oil pan / piston",80:"Crankcase / main components",85:"Carburetor / fuel system"};
+let S=JSON.parse(localStorage.getItem("sep_v3")||"null")||{dark:false,equipment:[],active:null,services:[],saved:[],checks:{}};
+const $=x=>document.getElementById(x), esc=x=>String(x??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+function save(){localStorage.setItem("sep_v3",JSON.stringify(S))}
+function toast(x){$("toast").textContent=x;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1800)}
+function go(id){document.querySelectorAll(".screen").forEach(x=>x.classList.toggle("active",x.id===id));document.querySelectorAll(".nav").forEach(x=>x.classList.toggle("active",x.dataset.go===id));window.scrollTo(0,0);render()}
+document.querySelectorAll(".nav").forEach(x=>x.onclick=()=>go(x.dataset.go));
+function toggleDark(){S.dark=!S.dark;document.body.classList.toggle("dark",S.dark);save()}
+function ensure(){if(!S.equipment.length){let e={id:Date.now(),make:"Kohler",model:"CV730",engine:"Kohler CV730",serial:"",hours:"",notes:""};S.equipment=[e];S.active=e.id;save()}if(!S.active)S.active=S.equipment[0].id}
+function current(){ensure();return S.equipment.find(x=>x.id===S.active)||S.equipment[0]}
+function renderCatalog(){
+  let cats=Object.keys(CAT);$("categoryTiles").innerHTML=cats.map(c=>`<button class="tile" onclick="filterCat('${esc(c)}')"><span class="ico">${c==="Engines"?"🧰":c==="Lawn Equipment"?"🌱":c==="Pressure Washers"?"💦":c==="Generators"?"⚡":"🪵"}</span><b>${c}</b><small>${CAT[c].length} reference groups</small></button>`).join("");
+  drawResults(CAT);
+}
+function filterCat(c){drawResults({[c]:CAT[c]})}
+function drawResults(data){
+  let arr=[];Object.entries(data).forEach(([cat,rows])=>rows.forEach(r=>arr.push([cat,...r])));
+  let q=($("catalogSearch").value||"").toLowerCase();arr=arr.filter(r=>r.join(" ").toLowerCase().includes(q));
+  $("catalogResults").innerHTML=arr.map(r=>`<div class="item"><div><span class="pill">${esc(r[0])}</span><h3 style="margin-top:7px">${esc(r[1])}</h3><small>${esc(r[2])} • ${esc(r[3])}</small></div><div class="actions"><button class="btn primary" onclick="window.open('${r[5]}','_blank')">Official support</button><button class="btn" onclick="addFromLibrary('${esc(r[1])}','${esc(r[2])}')">Add to My Gear</button></div></div>`).join("")||`<div class="card">No matches.</div>`
+}
+$("catalogSearch").oninput=renderCatalog;
+function addFromLibrary(model,kind){S.equipment.push({id:Date.now(),make:"",model,engine:kind,serial:"",hours:"",notes:""});S.active=S.equipment[S.equipment.length-1].id;save();go("equipment");toast("Added to My Gear")}
+function addEquipment(){
+ $("modal").classList.add("show");$("panel").innerHTML=`<h2>Add equipment</h2><div class="grid"><input id="mk" class="input" placeholder="Make"><input id="mo" class="input" placeholder="Model"><input id="en" class="input" placeholder="Engine"><input id="sn" class="input" placeholder="Serial number"><input id="hr" class="input" placeholder="Hours"><input id="nt" class="input" placeholder="Notes"></div><div class="row" style="margin-top:12px"><button class="btn primary" onclick="saveEq()">Save</button><button class="btn" onclick="closeM()">Cancel</button></div>`
+}
+function saveEq(){let e={id:Date.now(),make:$("mk").value||"Unknown",model:$("mo").value||"Unknown",engine:$("en").value,serial:$("sn").value,hours:$("hr").value,notes:$("nt").value};S.equipment.push(e);S.active=e.id;save();closeM();render();toast("Equipment added")}
+function closeM(){$("modal").classList.remove("show")}
+function renderEquipment(){$("equipmentList").innerHTML=S.equipment.map(e=>`<div class="item"><div><span class="pill">${e.id===S.active?"ACTIVE":"MACHINE"}</span><h3>${esc(e.make)} ${esc(e.model)}</h3><small>${esc(e.engine||"")}${e.serial?" • S/N "+esc(e.serial):""}${e.hours?" • "+esc(e.hours)+" hrs":""}</small></div><div class="actions"><button class="btn primary" onclick="S.active=${e.id};save();render()">Select</button><button class="btn" onclick="editEq(${e.id})">Edit</button></div></div>`).join("")}
+function editEq(id){let e=S.equipment.find(x=>x.id===id);$("modal").classList.add("show");$("panel").innerHTML=`<h2>Edit equipment</h2><div class="grid"><input id="mk" class="input" value="${esc(e.make)}"><input id="mo" class="input" value="${esc(e.model)}"><input id="en" class="input" value="${esc(e.engine)}"><input id="sn" class="input" value="${esc(e.serial)}"><input id="hr" class="input" value="${esc(e.hours)}"><input id="nt" class="input" value="${esc(e.notes)}"></div><div class="row" style="margin-top:12px"><button class="btn primary" onclick="updEq(${id})">Save</button><button class="btn" onclick="closeM()">Cancel</button></div>`}
+function updEq(id){let e=S.equipment.find(x=>x.id===id);Object.assign(e,{make:$("mk").value,model:$("mo").value,engine:$("en").value,serial:$("sn").value,hours:$("hr").value,notes:$("nt").value});save();closeM();render();toast("Equipment updated")}
+function openService(){let e=current();$("modal").classList.add("show");$("panel").innerHTML=`<h2>Log service</h2><p class="muted">${esc(e.make)} ${esc(e.model)}</p><input id="sv" class="input" placeholder="Work performed"><input id="sh" class="input" style="margin-top:8px" placeholder="Hour meter (optional)" value="${esc(e.hours)}"><input id="snote" class="input" style="margin-top:8px" placeholder="Notes / parts used"><div class="row" style="margin-top:12px"><button class="btn primary" onclick="saveService()">Save</button><button class="btn" onclick="closeM()">Cancel</button></div>`}
+function saveService(){let e=current(),v=$("sv").value.trim();if(!v)return toast("Enter the work performed");S.services.unshift({id:Date.now(),eid:e.id,task:v,hours:$("sh").value,notes:$("snote").value,date:new Date().toISOString()});if($("sh").value)e.hours=$("sh").value;save();closeM();render();toast("Service logged")}
+function renderMaintenance(){let e=current();$("maintName").textContent=`${e.make} ${e.model}`;let key=e.id;if(!S.checks[key])S.checks[key]={};let tasks=["Engine oil","Air cleaner","Spark plugs","Fuel system","Cooling fins","Battery / charging","Belts / pulleys","Leaks / fasteners"];$("checks").innerHTML=tasks.map((t,i)=>`<label style="display:flex;gap:9px;padding:11px 0;border-bottom:1px solid var(--l)"><input type="checkbox" ${S.checks[key][i]?"checked":""} onchange="S.checks[${key}][${i}]=this.checked;save()"><span>${t}</span></label>`).join("");$("history").innerHTML=S.services.filter(s=>s.eid===e.id).map(s=>`<div class="item" style="margin-top:8px"><div><b>${esc(s.task)}</b><small>${new Date(s.date).toLocaleString()}${s.hours?" • "+esc(s.hours)+" hrs":""}</small></div></div>`).join("")||"<p class='muted'>No service records yet.</p>"}
+function renderDashboard(){let e=current();$("dk1").textContent=S.equipment.length;$("dk2").textContent=S.saved.length;$("dk3").textContent=S.services.length;$("dashMachine").innerHTML=`<div class="item"><div><b>${esc(e.make)} ${esc(e.model)}</b><small>${esc(e.engine||"")}</small></div><button class="btn primary" onclick="go('equipment')">Manage</button></div>`;$("dashHistory").innerHTML=S.services.slice(0,6).map(s=>`<div style="padding:9px 0;border-bottom:1px solid var(--l)"><b>${esc(s.task)}</b><small style="display:block">${new Date(s.date).toLocaleString()}</small></div>`).join("")||"<p class='muted'>No activity yet.</p>"}
+function renderLookup(){$("lookupList").innerHTML=LOOKUPS.map(x=>`<div class="item"><div><b>${esc(x[0])}</b><small>${esc(x[1])}</small></div><button class="btn primary" onclick="window.open('${x[2]}','_blank')">Open official lookup</button></div>`).join("")}
+let pi=0,scale=1,x=0,y=0,drag=false,lx=0,ly=0;const P=PAGES;
+function setPage(i){pi=(i+P.length)%P.length;$("diagram").src=`page-${P[pi]}.png`;$("pageNum").textContent="Page "+P[pi];document.querySelectorAll(".thumb").forEach((t,j)=>t.classList.toggle("active",j===pi))}
+function fit(){let v=$("viewer"),im=$("diagram");scale=Math.min((v.clientWidth-20)/im.naturalWidth,(v.clientHeight-20)/im.naturalHeight);scale=Math.max(.05,Math.min(2,scale));x=0;y=0;tf()}
+function zoom(f){scale=Math.max(.1,Math.min(8,scale*f));tf()}function tf(){$("canvas").style.transform=`translate(-50%,-50%) translate(${x}px,${y}px) scale(${scale})`}
+$("diagram").onload=()=>{$("status").textContent=`Page ${P[pi]} • ${$("diagram").naturalWidth}×${$("diagram").naturalHeight}`;fit()}
+P.forEach((p,i)=>{let b=document.createElement("button");b.className="thumb";b.innerHTML=`<img src="page-${p}.png"><small>${p}</small>`;b.onclick=()=>setPage(i);$("thumbs").appendChild(b)})
+$("viewer").onpointerdown=e=>{drag=true;lx=e.clientX;ly=e.clientY;$("viewer").setPointerCapture(e.pointerId)};$("viewer").onpointermove=e=>{if(!drag)return;x+=e.clientX-lx;y+=e.clientY-ly;lx=e.clientX;ly=e.clientY;tf()};$("viewer").onpointerup=()=>drag=false;
+function savePage(){if(!S.saved.includes(P[pi]))S.saved.push(P[pi]);save();renderDashboard();toast("Diagram saved")}
+function openManual(){location.href="Kohler_CV620_CV730_Service_Manual.pdf"}
+function backup(){let b=new Blob([JSON.stringify(S,null,2)],{type:"application/json"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="small-engine-pro-backup.json";a.click();URL.revokeObjectURL(u)}
+function restore(i){let f=i.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{S=JSON.parse(r.result);save();render();toast("Backup restored")}catch(e){toast("Invalid backup")}};r.readAsText(f)}
+function resetAll(){if(confirm("Clear all app data?")){localStorage.removeItem("sep_v3");location.reload()}}
+function render(){ensure();renderCatalog();renderLookup();renderEquipment();renderMaintenance();renderDashboard()}
+document.body.classList.toggle("dark",S.dark);render();setPage(0);
+</script></body></html>
