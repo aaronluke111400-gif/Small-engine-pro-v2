@@ -4,66 +4,184 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#07101f">
-<title>Small Engine Pro — Kohler CV730 Diagrams</title>
+<title>Small Engine Pro</title>
 <style>
-:root{--navy:#07101f;--blue:#2563eb;--text:#17213a;--muted:#68748b;--line:#d7dde7;--bg:#f4f6f9}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-body{min-height:100vh}.top{background:var(--navy);color:#fff;padding:20px 18px 16px;position:sticky;top:0;z-index:10}
-.brand{display:flex;align-items:center;gap:12px}.gear{font-size:38px}.brand h1{font-size:23px;margin:0;font-weight:800}.brand p{margin:2px 0 0;color:#b9c2d2;font-size:14px;font-weight:600}
-main{max-width:1000px;margin:auto;padding:18px 14px 110px}.back{color:var(--blue);font-weight:700;margin-bottom:8px}.title{font-size:34px;line-height:1.05;margin:0 0 6px}.sub{color:var(--muted);font-size:17px;margin-bottom:16px}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 18px #18243a12;overflow:hidden}.toolbar{display:flex;gap:8px;flex-wrap:wrap;padding:12px}.btn{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;font-size:16px;font-weight:750;color:var(--text)}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
-.viewer{position:relative;height:min(68vh,720px);min-height:420px;background:#eef1f6;overflow:hidden;touch-action:none;display:flex;align-items:center;justify-content:center}.canvas{position:absolute;left:50%;top:50%;transform-origin:center center;will-change:transform}.canvas img{display:block;max-width:none;width:auto;height:auto;user-select:none;-webkit-user-drag:none}
-.status{padding:10px 14px;color:var(--muted);font-size:14px;text-align:center;border-top:1px solid var(--line)}
-.controls{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;flex-wrap:wrap}.controls .btn{min-width:52px}.page{font-weight:800;min-width:90px;text-align:center}
-.pages{display:flex;gap:8px;overflow-x:auto;padding:12px;-webkit-overflow-scrolling:touch}.thumb{flex:0 0 86px;border:2px solid var(--line);border-radius:10px;background:#fff;padding:4px}.thumb.active{border-color:var(--blue)}.thumb img{width:100%;height:58px;object-fit:contain}.thumb div{text-align:center;font-size:12px;font-weight:700;padding:3px}
-.notice{margin-top:14px;padding:14px;border-radius:14px;background:#fff;border:1px solid var(--line);color:var(--muted);font-size:14px}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:#cbd3e1;display:flex;justify-content:space-around;padding:10px 4px calc(10px + env(safe-area-inset-bottom));z-index:20}.nav{text-align:center;font-size:12px;font-weight:700}.nav span{display:block;font-size:22px;margin-bottom:2px}.nav.active{color:#fff}
-@media(min-width:700px){main{padding-top:28px}.viewer{height:700px}.title{font-size:42px}}
+:root{--navy:#07101f;--navy2:#101a2c;--blue:#2563eb;--blue2:#dbe8ff;--text:#17213a;--muted:#68748b;--line:#d9dfE8;--bg:#f4f6f9;--card:#fff;--good:#15803d}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+body{min-height:100vh}.top{background:var(--navy);color:#fff;padding:18px 18px 16px;position:sticky;top:0;z-index:50}.brand{display:flex;align-items:center;gap:12px}.gear{font-size:38px}.brand h1{font-size:23px;line-height:1;margin:0;font-weight:850;letter-spacing:.2px}.brand p{margin:5px 0 0;color:#b9c2d2;font-size:14px;font-weight:650}
+main{max-width:1050px;margin:auto;padding:18px 14px 112px}.screen{display:none}.screen.active{display:block}
+h2{font-size:31px;line-height:1.08;margin:8px 0}.sub{color:var(--muted);font-size:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 18px #18243a12;padding:16px;margin:14px 0}.hero{background:linear-gradient(135deg,#0b172b,#142746);color:#fff;border:0;padding:22px}.hero .sub{color:#c5d0e3}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tile{border:1px solid var(--line);background:#fff;border-radius:16px;padding:16px;text-align:left;min-height:118px;font-weight:800;color:var(--text)}.tile .ico{font-size:28px;display:block;margin-bottom:8px}.tile small{display:block;color:var(--muted);font-weight:600;margin-top:4px}
+button,input,textarea,select{font:inherit}.btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:12px;padding:11px 14px;font-weight:800;cursor:pointer}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.danger{color:#b91c1c}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.search{width:100%;padding:14px 15px;border:1px solid var(--line);border-radius:14px;background:#fff;outline:none}.search:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2563eb18}.muted{color:var(--muted)}.tag{display:inline-block;padding:5px 9px;border-radius:999px;background:var(--blue2);color:#1d4ed8;font-size:12px;font-weight:800}.list{display:flex;flex-direction:column;gap:8px}.listitem{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;display:flex;align-items:center;justify-content:space-between;gap:12px}.listitem strong{display:block}.listitem small{color:var(--muted)}
+.viewerCard{padding:0;overflow:hidden}.viewerTop{padding:14px}.viewer{height:min(68vh,720px);min-height:430px;background:#eef1f6;overflow:hidden;position:relative;touch-action:none;display:flex;align-items:center;justify-content:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.canvas{position:absolute;left:50%;top:50%;transform-origin:center center;will-change:transform}.canvas img{display:block;max-width:none;width:auto;height:auto;user-select:none;-webkit-user-drag:none}.viewerStatus{text-align:center;padding:9px;color:var(--muted);font-size:13px}.pageControls{display:flex;justify-content:center;align-items:center;gap:8px;padding:12px;flex-wrap:wrap}.pageNum{font-weight:850;min-width:92px;text-align:center}.thumbs{display:flex;gap:8px;overflow-x:auto;padding:10px 12px 14px}.thumb{flex:0 0 88px;border:2px solid var(--line);border-radius:10px;background:#fff;padding:4px}.thumb.active{border-color:var(--blue)}.thumb img{width:100%;height:58px;object-fit:contain}.thumb div{text-align:center;font-size:12px;font-weight:800;padding:3px}
+.bottom{position:fixed;left:0;right:0;bottom:0;background:var(--navy);color:#bfc9da;display:grid;grid-template-columns:repeat(5,1fr);padding:8px 3px calc(8px + env(safe-area-inset-bottom));z-index:100}.nav{border:0;background:none;color:inherit;text-align:center;font-weight:700;font-size:11px;padding:4px 1px}.nav span{display:block;font-size:21px;height:25px}.nav.active{color:#fff}.nav.active span{filter:drop-shadow(0 0 5px #5c8dff)}
+.detail{padding:14px 0;border-bottom:1px solid var(--line)}.detail:last-child{border-bottom:0}.detail b{display:block;margin-bottom:4px}.empty{text-align:center;padding:28px 12px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%) translateY(20px);background:#111827;color:#fff;padding:11px 15px;border-radius:12px;opacity:0;pointer-events:none;transition:.2s;z-index:200;font-weight:700}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}main{padding-top:28px}.viewer{height:700px}h2{font-size:40px}}
 </style>
 </head>
 <body>
-<header class="top"><div class="brand"><div class="gear">⚙️</div><div><h1>SMALL ENGINE PRO</h1><p>Fix it. Maintain it. Build it.</p></div></div></header>
+<header class="top">
+  <div class="brand"><div class="gear">⚙️</div><div><h1>SMALL ENGINE PRO</h1><p>Fix it. Maintain it. Build it.</p></div></div>
+</header>
+
 <main>
-<div class="back">‹ Back to interactive diagram</div>
-<h2 class="title">CV730 — Kohler Exploded Diagrams</h2>
-<div class="sub">Actual service-manual artwork • local files</div>
-<section class="card">
-<div class="toolbar">
-<button class="btn primary" id="manual">📖 Open Full Manual</button>
-<button class="btn" id="fit">⚙️ Fit Diagram</button>
-</div>
-<div class="viewer" id="viewer">
-<div class="canvas" id="canvas"><img id="diagram" alt="Kohler CV730 service-manual diagram"></div>
-</div>
-<div class="status" id="status">Loading diagram…</div>
-<div class="controls">
-<button class="btn" id="prev">‹</button><button class="btn" id="minus">−</button>
-<div class="page" id="page">Page 58</div>
-<button class="btn" id="plus">+</button><button class="btn" id="next">›</button>
-</div>
-<div class="pages" id="pages"></div>
+<section id="home" class="screen active">
+  <div class="card hero">
+    <span class="tag">YOUR GARAGE</span>
+    <h2>Kohler CV730</h2>
+    <div class="sub">Service manual, diagrams, parts references and maintenance tools.</div>
+    <div class="row" style="margin-top:16px">
+      <button class="btn primary" onclick="go('parts')">Open Diagrams</button>
+      <button class="btn" onclick="go('equipment')">Equipment</button>
+    </div>
+  </div>
+  <h2>Quick access</h2>
+  <div class="grid">
+    <button class="tile" onclick="go('parts')"><span class="ico">⚙️</span>Parts & Diagrams<small>Browse service-manual pages</small></button>
+    <button class="tile" onclick="openManual()"><span class="ico">📖</span>Service Manual<small>Open the local PDF</small></button>
+    <button class="tile" onclick="go('search')"><span class="ico">🔎</span>Search<small>Find pages and references</small></button>
+    <button class="tile" onclick="go('lists')"><span class="ico">📋</span>My Lists<small>Save parts and notes</small></button>
+  </div>
+  <div class="card"><strong>Recent page</strong><div class="muted" id="recentHome" style="margin-top:5px">Page 58</div></div>
 </section>
-<div class="notice"><strong>How to use:</strong> pinch to zoom, drag to pan, double-tap to zoom, or use the + / − buttons. Swipe left or right on the diagram to change pages.</div>
+
+<section id="search" class="screen">
+  <h2>Search</h2><div class="sub">Search the local diagram index and service references.</div>
+  <div class="card">
+    <input id="searchBox" class="search" placeholder="Search parts, pages, references…" autocomplete="off">
+  </div>
+  <div id="searchResults" class="list"></div>
+</section>
+
+<section id="parts" class="screen">
+  <div class="row" style="justify-content:space-between">
+    <div><h2>Parts & Diagrams</h2><div class="sub">Kohler CV730 service-manual artwork</div></div>
+    <button class="btn" onclick="openManual()">📖 Manual</button>
+  </div>
+  <div class="card viewerCard">
+    <div class="viewerTop">
+      <div class="row">
+        <button class="btn primary" onclick="fit()">Fit</button>
+        <button class="btn" onclick="zoom(1.25)">＋</button>
+        <button class="btn" onclick="zoom(.8)">−</button>
+        <button class="btn" onclick="resetView()">Reset</button>
+      </div>
+    </div>
+    <div class="viewer" id="viewer"><div class="canvas" id="canvas"><img id="diagram" alt="Kohler service manual diagram"></div></div>
+    <div id="status" class="viewerStatus">Loading…</div>
+    <div class="pageControls">
+      <button class="btn" onclick="setPage(index-1)">‹</button>
+      <div class="pageNum" id="pageNum">Page 58</div>
+      <button class="btn" onclick="setPage(index+1)">›</button>
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+  <div class="card">
+    <strong>Selected page</strong>
+    <div id="pageInfo" class="muted" style="margin-top:5px">Page 58</div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn primary" onclick="savePage()">⭐ Save page</button>
+      <button class="btn" onclick="addNote()">📝 Add note</button>
+    </div>
+  </div>
+</section>
+
+<section id="equipment" class="screen">
+  <h2>Equipment</h2><div class="sub">Keep the engines and machines you work on in one place.</div>
+  <div class="card">
+    <div class="row" style="justify-content:space-between"><div><strong>Kohler CV730</strong><div class="muted">Current equipment</div></div><span class="tag">ACTIVE</span></div>
+    <div class="detail"><b>Engine</b>Kohler CV730 V-twin</div>
+    <div class="detail"><b>Documents</b>CV620–CV730 service manual and local diagram pages</div>
+    <button class="btn primary" onclick="go('parts')">Open equipment diagrams</button>
+  </div>
+  <div class="card"><strong>Add equipment</strong><div class="muted" style="margin:5px 0 12px">Create another machine for your garage.</div>
+    <div class="row"><input id="newEquip" class="search" style="flex:1" placeholder="e.g. John Deere D110"><button class="btn primary" onclick="addEquipment()">Add</button></div>
+  </div>
+  <div id="equipmentList" class="list"></div>
+</section>
+
+<section id="lists" class="screen">
+  <h2>My Lists</h2><div class="sub">Saved diagram pages and your notes stay on this device.</div>
+  <div class="card"><strong>Saved pages</strong><div id="savedPages" class="list" style="margin-top:10px"></div></div>
+  <div class="card"><strong>Notes</strong><div id="notes" class="list" style="margin-top:10px"></div><button class="btn primary" style="margin-top:10px" onclick="addNote()">＋ New note</button></div>
+</section>
+
+<section id="more" class="screen">
+  <h2>More</h2><div class="sub">App tools and settings.</div>
+  <div class="card">
+    <div class="detail"><b>📖 Service manual</b><button class="btn primary" style="margin-top:8px" onclick="openManual()">Open PDF</button></div>
+    <div class="detail"><b>🔄 Refresh app</b><div class="muted">Reload the current application.</div><button class="btn" style="margin-top:8px" onclick="location.reload()">Reload</button></div>
+    <div class="detail"><b>🧹 Reset local data</b><div class="muted">Deletes saved pages, notes and added equipment from this device.</div><button class="btn danger" style="margin-top:8px" onclick="resetData()">Clear local data</button></div>
+  </div>
+  <div class="card"><strong>Small Engine Pro</strong><div class="muted" style="margin-top:5px">Personal workshop edition • local-first web app</div></div>
+</section>
 </main>
-<nav class="bottom"><div class="nav"><span>⌂</span>Home</div><div class="nav"><span>⌕</span>Search</div><div class="nav active"><span>⚙️</span>Parts</div><div class="nav"><span>▤</span>Equipment</div><div class="nav"><span>•••</span>More</div></nav>
+
+<nav class="bottom">
+<button class="nav active" data-go="home"><span>⌂</span>Home</button>
+<button class="nav" data-go="search"><span>⌕</span>Search</button>
+<button class="nav" data-go="parts"><span>⚙️</span>Parts</button>
+<button class="nav" data-go="equipment"><span>▤</span>Equipment</button>
+<button class="nav" data-go="more"><span>•••</span>More</button>
+</nav>
+<div id="toast" class="toast"></div>
+
 <script>
 const PAGES=[58,60,62,63,65,66,68,75,79,80,85];
-let index=0,scale=1,x=0,y=0,startX=0,startY=0,moved=false,startDist=0,startScale=1;
-const img=document.getElementById('diagram'),canvas=document.getElementById('canvas'),viewer=document.getElementById('viewer'),pageEl=document.getElementById('page'),statusEl=document.getElementById('status');
+const PAGE_INFO={
+58:"Breather / oil pan / piston components",
+60:"Engine internal components",
+62:"Crankcase / crankshaft components",
+63:"Camshaft / governor components",
+65:"Cylinder head / valve components",
+66:"Ignition / flywheel components",
+68:"Starter / charging components",
+75:"Fuel system components",
+79:"Carburetor components",
+80:"Air cleaner / breather components",
+85:"External engine components"
+};
+const COMMON=[
+["Breather / oil pan / piston","Page 58",58],["Crankshaft / crankcase","Page 62",62],["Camshaft / governor","Page 63",63],
+["Cylinder head / valves","Page 65",65],["Ignition / flywheel","Page 66",66],["Starter / charging","Page 68",68],
+["Fuel system","Page 75",75],["Carburetor","Page 79",79],["Air cleaner / breather","Page 80",80],["External engine components","Page 85",85]
+];
+let index=0,scale=1,x=0,y=0,startX=0,startY=0,moved=false,pointers=new Map(),startDist=0,startScale=1;
+const $=id=>document.getElementById(id);
+function toast(t){$("toast").textContent=t;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1800)}
+function go(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));document.querySelectorAll(".nav").forEach(n=>n.classList.toggle("active",n.dataset.go===id));window.scrollTo(0,0)}
+document.querySelectorAll(".nav").forEach(n=>n.onclick=()=>go(n.dataset.go));
 function src(n){return `page-${n}.png`}
-function transform(){canvas.style.transform=`translate(-50%,-50%) translate(${x}px,${y}px) scale(${scale})`}
-function fit(){const nw=img.naturalWidth||1000,nh=img.naturalHeight||700;scale=Math.max(.05,Math.min(2,(viewer.clientWidth-28)/nw,(viewer.clientHeight-28)/nh));x=0;y=0;transform()}
+function transform(){$("canvas").style.transform=`translate(-50%,-50%) translate(${x}px,${y}px) scale(${scale})`}
+function resetView(){scale=1;x=0;y=0;fit()}
+function fit(){const nw=$("diagram").naturalWidth||1000,nh=$("diagram").naturalHeight||700;scale=Math.max(.05,Math.min(2,($("viewer").clientWidth-30)/nw,($("viewer").clientHeight-30)/nh));x=0;y=0;transform()}
 function zoom(f){scale=Math.max(.1,Math.min(8,scale*f));transform()}
-function setPage(i){index=(i+PAGES.length)%PAGES.length;x=0;y=0;scale=1;img.src=src(PAGES[index]);pageEl.textContent=`Page ${PAGES[index]}`;document.querySelectorAll('.thumb').forEach((t,j)=>t.classList.toggle('active',j===index))}
-img.onload=()=>{statusEl.textContent=`Page ${PAGES[index]} • ${img.naturalWidth} × ${img.naturalHeight}`;fit()}
-img.onerror=()=>statusEl.textContent=`Could not load page-${PAGES[index]}.png. Keep the PNG files beside index.html.`;
-document.getElementById('fit').onclick=fit;document.getElementById('plus').onclick=()=>zoom(1.25);document.getElementById('minus').onclick=()=>zoom(.8);document.getElementById('prev').onclick=()=>setPage(index-1);document.getElementById('next').onclick=()=>setPage(index+1);document.getElementById('manual').onclick=()=>location.href='Kohler_CV620_CV730_Service_Manual.pdf';
-PAGES.forEach((p,i)=>{const b=document.createElement('button');b.className='thumb';b.innerHTML=`<img src="${src(p)}" alt="Page ${p}"><div>${p}</div>`;b.onclick=()=>setPage(i);document.getElementById('pages').appendChild(b)});
-viewer.addEventListener('pointerdown',e=>{viewer.setPointerCapture(e.pointerId);startX=e.clientX;startY=e.clientY;moved=false});
-viewer.addEventListener('pointermove',e=>{if(!viewer.hasPointerCapture(e.pointerId))return;const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.abs(dx)+Math.abs(dy)>4)moved=true;if(moved){x+=dx;y+=dy;startX=e.clientX;startY=e.clientY;transform()}});
-viewer.addEventListener('pointerup',e=>{if(!moved){if(e.clientX<viewer.clientWidth*.3)setPage(index-1);else if(e.clientX>viewer.clientWidth*.7)setPage(index+1)}});
-let pointers=new Map();viewer.addEventListener('pointerdown',e=>pointers.set(e.pointerId,e));viewer.addEventListener('pointermove',e=>{pointers.set(e.pointerId,e);if(pointers.size===2){const a=[...pointers.values()][0],b=[...pointers.values()][1],d=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);if(!startDist){startDist=d;startScale=scale}scale=Math.max(.1,Math.min(8,startScale*d/startDist));transform()}});function clear(e){pointers.delete(e.pointerId);if(pointers.size<2)startDist=0}viewer.addEventListener('pointerup',clear);viewer.addEventListener('pointercancel',clear);
-let lastTap=0;viewer.addEventListener('click',()=>{const now=Date.now();if(now-lastTap<300)zoom(1.7);lastTap=now});
-img.src=src(PAGES[0]);pageEl.textContent='Page 58';
+function setPage(i){index=(i+PAGES.length)%PAGES.length;localStorage.setItem("lastPage",PAGES[index]);x=0;y=0;scale=1;$("diagram").src=src(PAGES[index]);$("pageNum").textContent=`Page ${PAGES[index]}`;$("pageInfo").textContent=`Page ${PAGES[index]} — ${PAGE_INFO[PAGES[index]]||"Service-manual diagram"}`;document.querySelectorAll(".thumb").forEach((t,j)=>t.classList.toggle("active",j===index));$("recentHome").textContent=`Page ${PAGES[index]} — ${PAGE_INFO[PAGES[index]]||"Service-manual diagram"}`}
+$("diagram").onload=()=>{$("status").textContent=`Page ${PAGES[index]} • ${$("diagram").naturalWidth} × ${$("diagram").naturalHeight}`;fit()};
+$("diagram").onerror=()=>{$("status").textContent=`Could not load ${src(PAGES[index])}. Keep the PNG files beside index.html.`};
+PAGES.forEach((p,i)=>{const b=document.createElement("button");b.className="thumb";b.innerHTML=`<img src="${src(p)}" alt="Page ${p}"><div>${p}</div>`;b.onclick=()=>setPage(i);$("thumbs").appendChild(b)});
+function openManual(){location.href="Kohler_CV620_CV730_Service_Manual.pdf"}
+function savePage(){let a=JSON.parse(localStorage.getItem("savedPages")||"[]");if(!a.includes(PAGES[index]))a.push(PAGES[index]);localStorage.setItem("savedPages",JSON.stringify(a));renderLists();toast(`Page ${PAGES[index]} saved`)}
+function addNote(){const n=prompt("Enter your note:");if(!n)return;let a=JSON.parse(localStorage.getItem("notes")||"[]");a.unshift({text:n,page:PAGES[index],date:new Date().toLocaleDateString()});localStorage.setItem("notes",JSON.stringify(a));renderLists();toast("Note saved")}
+function removeSaved(p){let a=JSON.parse(localStorage.getItem("savedPages")||"[]").filter(x=>x!==p);localStorage.setItem("savedPages",JSON.stringify(a));renderLists()}
+function removeNote(i){let a=JSON.parse(localStorage.getItem("notes")||"[]");a.splice(i,1);localStorage.setItem("notes",JSON.stringify(a));renderLists()}
+function renderLists(){
+ let sp=JSON.parse(localStorage.getItem("savedPages")||"[]");$("savedPages").innerHTML=sp.length?sp.map(p=>`<div class="listitem"><div><strong>Page ${p}</strong><small>${PAGE_INFO[p]||"Service-manual diagram"}</small></div><div class="row"><button class="btn" onclick="setPage(PAGES.indexOf(${p}));go('parts')">Open</button><button class="btn danger" onclick="removeSaved(${p})">Remove</button></div></div>`).join(""):`<div class="empty">No saved pages yet.</div>`;
+ let ns=JSON.parse(localStorage.getItem("notes")||"[]");$("notes").innerHTML=ns.length?ns.map((n,i)=>`<div class="listitem"><div><strong>Page ${n.page}</strong><small>${escapeHtml(n.text)} • ${n.date}</small></div><button class="btn danger" onclick="removeNote(${i})">Delete</button></div>`).join(""):`<div class="empty">No notes yet.</div>`;
+ let eq=JSON.parse(localStorage.getItem("equipment")||"[]");$("equipmentList").innerHTML=eq.map((e,i)=>`<div class="listitem"><div><strong>${escapeHtml(e)}</strong><small>Added to this device</small></div><button class="btn danger" onclick="removeEquipment(${i})">Remove</button></div>`).join("");
+}
+function addEquipment(){const v=$("newEquip").value.trim();if(!v)return;let a=JSON.parse(localStorage.getItem("equipment")||"[]");a.push(v);localStorage.setItem("equipment",JSON.stringify(a));$("newEquip").value="";renderLists();toast("Equipment added")}
+function removeEquipment(i){let a=JSON.parse(localStorage.getItem("equipment")||"[]");a.splice(i,1);localStorage.setItem("equipment",JSON.stringify(a));renderLists()}
+function resetData(){if(!confirm("Clear saved pages, notes and added equipment?"))return;["savedPages","notes","equipment"].forEach(k=>localStorage.removeItem(k));renderLists();toast("Local data cleared")}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+$("searchBox").addEventListener("input",e=>{const q=e.target.value.toLowerCase().trim();const r=q?COMMON.filter(x=>(x[0]+" "+x[1]).toLowerCase().includes(q)):COMMON;$("searchResults").innerHTML=r.map(x=>`<div class="listitem"><div><strong>${x[0]}</strong><small>${x[1]}</small></div><button class="btn primary" onclick="setPage(PAGES.indexOf(${x[2]}));go('parts')">Open</button></div>`).join("")||`<div class="empty">No matching references.</div>`});
+function pointerDown(e){pointers.set(e.pointerId,e);$("viewer").setPointerCapture(e.pointerId);startX=e.clientX;startY=e.clientY;moved=false}
+function pointerMove(e){pointers.set(e.pointerId,e);if(pointers.size===2){const a=[...pointers.values()][0],b=[...pointers.values()][1],d=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);if(!startDist){startDist=d;startScale=scale}scale=Math.max(.1,Math.min(8,startScale*d/startDist));transform();return}const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.abs(dx)+Math.abs(dy)>4)moved=true;if(moved){x+=dx;y+=dy;startX=e.clientX;startY=e.clientY;transform()}}
+function pointerUp(e){pointers.delete(e.pointerId);if(pointers.size<2)startDist=0;if(!moved&&e.pointerType==="touch"){if(e.clientX<$("viewer").clientWidth*.25)setPage(index-1);else if(e.clientX>$("viewer").clientWidth*.75)setPage(index+1)}}
+$("viewer").addEventListener("pointerdown",pointerDown);$("viewer").addEventListener("pointermove",pointerMove);$("viewer").addEventListener("pointerup",pointerUp);$("viewer").addEventListener("pointercancel",pointerUp);
+let lastTap=0;$("viewer").addEventListener("click",()=>{const n=Date.now();if(n-lastTap<300)zoom(1.7);lastTap=n});
+let last=Number(localStorage.getItem("lastPage")||58);index=Math.max(0,PAGES.indexOf(last));setPage(index);renderLists();
 </script>
-</body></html>
+</body>
+</html>
